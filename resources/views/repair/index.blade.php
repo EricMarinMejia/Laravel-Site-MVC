@@ -9,7 +9,7 @@
         </div>
 
         <div class="col-lg-2">
-            <a class="btn btn-success" href="{{ url('article/create') }}">Ajouter une reparation</a>
+            <a class="btn btn-success" href="{{ url('repair/create') }}">Ajouter une reparation</a>
         </div>
 
     </div>

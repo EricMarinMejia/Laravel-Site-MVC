@@ -37,7 +37,7 @@ class RepairController extends Controller
      */
     public function store(Request $request)
     {
-        //TODO Currently 22:41 PM why does $today give 02:41????
+        //TODO Currently using UTC time. Should be using EAST TIME
         //TODO check if date_start is before date_end
         //TODO check if the vehicle_id exists
         $today = date("Y-m-d H:i:s");
@@ -100,7 +100,7 @@ class RepairController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //TODO Currently 22:41 PM why does $today give 02:41????
+        //TODO Currently using UTC time. Should be using EAST TIME
         //TODO check if date_start is before date_end
         //TODO check if the vehicle_id exists
         $today = date("Y-m-d H:i:s");
@@ -114,7 +114,7 @@ class RepairController extends Controller
             'mechanic'=>'required'
         ]);
 
-        $repair = repair::findOrFail($id);
+        $repair = Repair::findOrFail($id);
 
         $repair->updated_at = $today;
         $repair->vehicle_id = $request->get('vehicle_id');

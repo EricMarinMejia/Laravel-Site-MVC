@@ -28,11 +28,20 @@ Route::controller(RepairController::class)->group(function () {
 
     Route::post('/repair', 'store');
     Route::patch('/repair/{id}', 'update');
-    Route::delete('/repair/{id}', 'destroy'); 
+    Route::delete('/repair/{id}', 'destroy');
 });
 
 Route::controller(VehicleController::class)->group(function () {
-    Route::get('/vehicle',[VehicleController::class, 'index']);
+    Route::resource('vehicles', VehicleController::class);
+
+    Route::get('/vehicle', 'index');
+    Route::get('/vehicle/create', 'create');
+    Route::get('/vehicle/{id}', 'show');
+    Route::get('/vehicle/{id}/edit', 'edit');
+
+    Route::post('/vehicle', 'store');
+    Route::patch('/vehicle/{id}', 'update');
+    Route::delete('/vehicle/{id}', 'destroy');
 });
 
 Route::controller(UserController::class)->group(function () {

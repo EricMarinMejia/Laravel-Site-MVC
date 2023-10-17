@@ -42,13 +42,13 @@
         
         <div class="form-group mb-3">
             <label for="description">Description:</label>
-            <textarea type="text" class="form-control" id="description" placeholder="description" name="description"></textarea>
+            <textarea type="text" class="form-control" id="description" placeholder="Description" name="description"></textarea>
         </div>
 
 
         <div class="form-group mb-3">
             <label for="amount_paid">Montant payé:</label>
-            <input type="number" min=0 class="form-control" id="amount_paid" placeholder="amount_paid" name="amount_paid" />
+            <input type="number" min=0 class="form-control" id="amount_paid" placeholder="Montant payé" name="amount_paid" />
         </div>
 
 

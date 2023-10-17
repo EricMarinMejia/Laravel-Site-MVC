@@ -10,7 +10,7 @@
         </div>
 
         <div class="col-lg-2">
-            <a class="btn btn-success" href="{{ url('repair/create') }}">Ajouter une réparation</a>
+            <a class="btn btn-success" href="{{ url('vehicle/create') }}">Ajouter un véhicule</a>
         </div>
 
     </div>
@@ -29,17 +29,17 @@
 <br />
 <div class="container">
     <div class="row">
-        @foreach ($repairs as $index => $repair)
+        @foreach ($vehicles as $index => $vehicle)
         <div class="col-md-4">
             <div class="card card-body">
-                <a href="{{ url('repair/'. $repair->id) }}">
+                <a href="{{ url('vehicle/'. $vehicle->id) }}">
                 <h2>
-                    Réparation #{{ $repair->id }}
+                    Véhicule #{{ $vehicle->id }}
                 </h2>
                 </a>
-            <p><strong>{{ $repair->description }}</strong></p>
-            <p>{{ $repair->date_start }} - {{ $repair->date_end }}</p>
-            <a href="{{ url('repair/'. $repair->id) }}" class="btn btn-outline-primary">Voir les détails</a>
+            <p><strong>{{ $vehicle->license_plate }}</strong></p>
+            <p>{{ $vehicle->brand }} {{ $vehicle->model }}</p>
+            <a href="{{ url('vehicle/'. $vehicle->id) }}" class="btn btn-outline-primary">Voir les détails</a>
             </div>
         </div>
         @endforeach

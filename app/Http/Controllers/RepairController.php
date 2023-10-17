@@ -40,7 +40,7 @@ class RepairController extends Controller
         //TODO Currently using UTC time. Should be using EAST TIME
         //TODO check if date_start is before date_end
         //TODO check if the vehicle_id exists
-        $today = date("Y-m-d H:i:s");
+        $today = now();
 
         $request->validate([
             'vehicle_id'=>'required',
@@ -103,7 +103,7 @@ class RepairController extends Controller
         //TODO Currently using UTC time. Should be using EAST TIME
         //TODO check if date_start is before date_end
         //TODO check if the vehicle_id exists
-        $today = date("Y-m-d H:i:s");
+        $today = now();
 
         $request->validate([
             'vehicle_id'=>'required',

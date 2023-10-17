@@ -45,7 +45,16 @@ Route::controller(VehicleController::class)->group(function () {
 });
 
 Route::controller(UserController::class)->group(function () {
-    Route::get('/user',[UserController::class, 'index']);
+    Route::resource('users', UserController::class);
+
+    Route::get('/user', 'index');
+    //Route::get('/user/create', 'create');
+    Route::get('/user/{id}', 'show');
+    //Route::get('/user/{id}/edit', 'edit');
+
+    //Route::post('/user', 'store');
+    //Route::patch('/user/{id}', 'update');
+    //Route::delete('/user/{id}', 'destroy');
 });
 
 Route::get('/{any}', function () {

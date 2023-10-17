@@ -12,7 +12,7 @@
             <p class="lead">Marque: {{ $vehicle->brand }}</p>
             <p class="lead">Modèle: {{ $vehicle->model }}</p>
             <p class="lead">Plaque: {{ $vehicle->license_plate }}</p>
-            <p class="lead">Kilometrage: {{ $vehicle->kilometers }}$</p>
+            <p class="lead">Kilometrage: {{ $vehicle->kilometers }} km</p>
             <br />
             <p class="lead">Entrée créer le: {{ $vehicle->created_at }}</p>
             <p class="lead">Dernière modification de l'entrée: {{ $vehicle->updated_at }}</p>

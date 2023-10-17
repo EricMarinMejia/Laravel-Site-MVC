@@ -16,7 +16,6 @@ class CreateRepairsTable extends Migration
         Schema::create('repairs', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer("vehicle_id");
             $table->date("date_start");
             $table->date("date_end");
             $table->text("description");

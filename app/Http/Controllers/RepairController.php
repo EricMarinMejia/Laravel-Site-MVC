@@ -7,20 +7,6 @@ use App\Models\Repair;
 
 class RepairController extends Controller
 {
-    /*
-    public function index() {
-        $repairs = Repair::all();
-        return view('repair.index', compact('repairs'));
-    }
-    */
-
-
-    /*
-    public function create()
-    {
-        return view('repair.create');
-    }
-    */
     
     /**
      * Display a listing of the resource.
@@ -52,6 +38,7 @@ class RepairController extends Controller
     public function store(Request $request)
     {
         //TODO check if date_start is before date_end
+        //TODO check if the vehicle_id exists
         $today = date("Y-m-d H:i:s");
 
         $request->validate([
@@ -94,7 +81,7 @@ class RepairController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Post  $post
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -107,21 +94,45 @@ class RepairController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Post  $post
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, $id)
     {
-        //
+        //TODO check if date_start is before date_end
+        //TODO check if the vehicle_id exists
+        $today = date("Y-m-d H:i:s");
+
+        $request->validate([
+            'vehicle_id'=>'required',
+            'date_start'=>'required',
+            'date_end'=>'required',
+            'description'=>'required',
+            'amount_paid'=>'required',
+            'mechanic'=>'required'
+        ]);
+
+        $repair = repair::findOrFail($id);
+
+        $repair->updated_at = $today;
+        $repair->vehicle_id = $request->get('vehicle_id');
+        $repair->date_start = $request->get('date_start');
+        $repair->date_end = $request->get('date_end');
+        $repair->description = $request->get('description');
+        $repair->amount_paid = $request->get('amount_paid');
+        $repair->mechanic = $request->get('mechanic');
+
+        $repair->update();
+        return redirect('/')->with('success', 'réparation modifié avec succès');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Post  $post
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy($id)
     {
         //
     }

@@ -27,7 +27,7 @@ Route::controller(RepairController::class)->group(function () {
     Route::get('/repair/{id}/edit', 'edit');
 
     Route::post('/repair', 'store');
-    Route::patch('/repair/{id}', 'update');     //NOT IMPLEMENTED
+    Route::patch('/repair/{id}', 'update');
     Route::delete('/repair/{id}', 'destroy');   //NOT IMPLEMENTED
 });
 
@@ -39,22 +39,6 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/user',[UserController::class, 'index']);
 });
 
-/*
-
-EXEMPLE GÉNÉRIQUE
-
-Route::controller(ArticleController::class)->group(function () {
-    Route::resource('articles',ArticleController::class);
-  
-      Route::get('/', 'index');
-      Route::get('/article/create', 'create');
-      Route::get('/article/{id}', 'show');
-      Route::get('/article/{id}/edit', 'edit');
-  
-  
-      Route::post('/article', 'store');
-      Route::patch('/article/{id}', 'update');
-      Route::delete('/article/{id}', 'destroy');
-  
-  });
-*/
+Route::get('/{any}', function () {
+    return redirect('/');
+})->where('any', '.*');

@@ -25,6 +25,10 @@
         @method('PATCH')
         @csrf
 
+        <div class="form-group mb-3">
+            <label for="vehicle_id">Id du véhicule:</label>
+            <input type="number" min=0 class="form-control" id="vehicle_id" placeholder="Id du véhicule" name="vehicle_id" value="{{ $repair->vehicle_id }}" />
+        </div>
 
         <div class="form-group mb-3">
             <label for="date_start">Date de début:</label>

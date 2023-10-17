@@ -28,7 +28,7 @@ Route::controller(RepairController::class)->group(function () {
 
     Route::post('/repair', 'store');
     Route::patch('/repair/{id}', 'update');
-    Route::delete('/repair/{id}', 'destroy');   //NOT IMPLEMENTED
+    Route::delete('/repair/{id}', 'destroy'); 
 });
 
 Route::controller(VehicleController::class)->group(function () {

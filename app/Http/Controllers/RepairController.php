@@ -37,6 +37,7 @@ class RepairController extends Controller
      */
     public function store(Request $request)
     {
+        //TODO Currently 22:41 PM why does $today give 02:41????
         //TODO check if date_start is before date_end
         //TODO check if the vehicle_id exists
         $today = date("Y-m-d H:i:s");
@@ -99,6 +100,7 @@ class RepairController extends Controller
      */
     public function update(Request $request, $id)
     {
+        //TODO Currently 22:41 PM why does $today give 02:41????
         //TODO check if date_start is before date_end
         //TODO check if the vehicle_id exists
         $today = date("Y-m-d H:i:s");
@@ -134,6 +136,8 @@ class RepairController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $repair = Repair::findOrFail($id);
+        $repair->delete();
+        return redirect('/')->with('success', 'réparation supprimé avec succès');
     }
 }

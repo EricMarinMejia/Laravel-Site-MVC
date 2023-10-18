@@ -6,7 +6,7 @@
 
         <div class="col-lg-10">
             <h3>Pro-Auto Experts</h3>
-            <h4>Système de gestion de réparations automobiles</h4>
+            <h4>Système de gestions des réparations automobiles</h4>
         </div>
 
         <div class="col-lg-2">

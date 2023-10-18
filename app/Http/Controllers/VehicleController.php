@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Repair;
 use Illuminate\Http\Request;
 use App\Models\Vehicle;
 use App\Models\User;
@@ -75,7 +76,9 @@ class VehicleController extends Controller
     {
         $vehicle = Vehicle::findOrFail($id);
         $user = User::findOrFail($vehicle['user_id']);
-        return view('vehicle.show', compact('vehicle', 'user'));
+        $repairs = Repair::where('vehicle_id', '=', $id)->get();
+
+        return view('vehicle.show', compact('vehicle', 'user', 'repairs'));
     }
 
     /**

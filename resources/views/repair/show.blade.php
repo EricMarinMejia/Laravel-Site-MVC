@@ -18,9 +18,14 @@
             <p class="lead">Entrée créer le: {{ $repair->created_at }}</p>
             <p class="lead">Dernière modification de l'entrée: {{ $repair->updated_at }}</p>
 
-            <a href="{{ url('vehicle/'. $vehicle->id) }}">
-                <h4>Voir le véhicule #{{ $vehicle->id }}: {{ $vehicle->brand }} {{ $vehicle->model }}</h4>
-            </a>
+
+            <form action="{{ url('vehicle/'. $vehicle->id) }}" style="display: inline">
+                    <button type="submit" class="btn btn-primary d-inline-flex align-items-center">
+                        Voir le véhicule #{{ $vehicle->id }}: {{ $vehicle->brand }} {{ $vehicle->model }}
+                    </button>
+            </form>
+            <br />
+            <br />
 
             <div class="buttons">
                 <a href="{{ url('repair/'. $repair->id .'/edit') }}" class="btn btn-info">Modifier</a>

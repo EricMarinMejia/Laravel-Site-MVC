@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Vehicle;
 
 class UserController extends Controller
 {
@@ -49,7 +50,8 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::findOrFail($id);
-        return view('user.show', compact('user'));
+        $vehicles = Vehicle::where('user_id', '=', $id)->get();
+        return view('user.show', compact('user', 'vehicles'));
     }
 
     /**

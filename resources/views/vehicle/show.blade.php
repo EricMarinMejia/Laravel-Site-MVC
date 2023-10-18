@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-md-12">
             <h1>Détails pour le véhicule #{{ $vehicle->id }}</h1>
-            <p class="lead">ID du propriétaire: {{ $vehicle->user_id }}</p>
+            <p class="lead">Propriétaire: {{ $user->first_name }} {{ $user->last_name }}</p>
             <p class="lead">Marque: {{ $vehicle->brand }}</p>
             <p class="lead">Modèle: {{ $vehicle->model }}</p>
             <p class="lead">Plaque: {{ $vehicle->license_plate }}</p>
@@ -16,6 +16,10 @@
             <br />
             <p class="lead">Entrée créer le: {{ $vehicle->created_at }}</p>
             <p class="lead">Dernière modification de l'entrée: {{ $vehicle->updated_at }}</p>
+
+            <a href="{{ url('user/'. $user->id) }}">
+                <h4>Voir l'utilisateur #{{ $user->id }}: {{ $user->first_name }} {{ $user->last_name }}</h4>
+            </a>
 
             <div class="buttons">
                 <a href="{{ url('vehicle/'. $vehicle->id .'/edit') }}" class="btn btn-info">Modifier</a>

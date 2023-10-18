@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Repair;
+use App\Models\Vehicle;
 
 class RepairController extends Controller
 {
@@ -76,7 +77,8 @@ class RepairController extends Controller
     public function show($id)
     {
         $repair = Repair::findOrFail($id);
-        return view('repair.show', compact('repair'));
+        $vehicle = Vehicle::findOrFail($repair['vehicle_id']);
+        return view('repair.show', compact('repair', 'vehicle'));
     }
 
     /**

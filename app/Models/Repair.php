@@ -20,4 +20,9 @@ class Repair extends Model
         'mechanic',
         'deleted'
     ];
+
+    public function vehicle()
+    {
+        return $this->belongsTo(Vehicle::class);
+    }
 }

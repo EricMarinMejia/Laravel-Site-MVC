@@ -18,4 +18,14 @@ class Vehicle extends Model
         'license_plate',
         'kilometers'
     ];
+
+    public function repairs()
+    {
+        return $this->hasMany(Repair::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

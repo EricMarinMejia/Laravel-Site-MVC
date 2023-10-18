@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-md-12">
             <h1>Détails pour la réparation #{{ $repair->id }}</h1>
-            <p class="lead">ID du véhicule: {{ $repair->vehicle_id }}</p>
+            <p class="lead">Véhicule: {{ $vehicle->brand }} {{ $vehicle->model }}</p>
             <p class="lead">Date de début: {{ $repair->date_start }}</p>
             <p class="lead">Date de fin: {{ $repair->date_end }}</p>
             <p class="lead">Description: {{ $repair->description }}</p>
@@ -17,6 +17,10 @@
             <br />
             <p class="lead">Entrée créer le: {{ $repair->created_at }}</p>
             <p class="lead">Dernière modification de l'entrée: {{ $repair->updated_at }}</p>
+
+            <a href="{{ url('vehicle/'. $vehicle->id) }}">
+                <h4>Voir le véhicule #{{ $vehicle->id }}: {{ $vehicle->brand }} {{ $vehicle->model }}</h4>
+            </a>
 
             <div class="buttons">
                 <a href="{{ url('repair/'. $repair->id .'/edit') }}" class="btn btn-info">Modifier</a>

@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RepairController;
 use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\UserController;
+//use App\Http\Controllers\Auth;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,14 +50,19 @@ Route::controller(UserController::class)->group(function () {
     Route::resource('users', UserController::class);
 
     Route::get('/user', 'index');
-    //Route::get('/user/create', 'create');
+    Route::get('/user/create', 'create');
     Route::get('/user/{id}', 'show');
     //Route::get('/user/{id}/edit', 'edit');
 
-    //Route::post('/user', 'store');
+    Route::post('/user', 'store');
     //Route::patch('/user/{id}', 'update');
     //Route::delete('/user/{id}', 'destroy');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 Route::get('/{any}', function () {
     return redirect('/');

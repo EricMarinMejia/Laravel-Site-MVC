@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             'age'=>18,
             'phone_number'=>'438-572-1616',
             'email'=>'jackdespatie@gmail.com',
-            'login'=>'jack',
+            'email_verified_at'=>'',
             'password'=>'123',
             'remember_token'=>'123',
             'created_at'=> now(),

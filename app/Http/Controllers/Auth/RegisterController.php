@@ -78,7 +78,7 @@ class RegisterController extends Controller
                 'age'=> $data['age'],
                 'phone_number'=> $data['phone_number'],
                 'email'=> $data['email'],
-                'email_verified_at'=> '',
+                'email_verified_at'=> null,
                 'password'=> Hash::make($data['password']),
                 'created_at'=> $today,
                 'updated_at'=> $today

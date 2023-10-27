@@ -59,6 +59,13 @@ Route::controller(UserController::class)->group(function () {
     //Route::delete('/user/{id}', 'destroy');
 });
 
+//Dashboard
+Route::group(['middleware' => ['auth']], function() {
+    Route::group(['middleware' => ['verified']], function() {
+        Route::get('/dashboard', 'DashboardController@index')->name('dashboard.index');
+    });
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

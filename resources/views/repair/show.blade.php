@@ -5,7 +5,13 @@
 
 <div class="container">
 
+        @guest
+        <h1>Connexion requise.</h1>
+        <p class="lead">Veuillez vous connecter ou créer un compte afin d'accéder à la page.</p>
+        @endguest
+
     <div class="row">
+        @auth
         <div class="col-md-12">
             <h1>Détails pour la réparation #{{ $repair->id }}</h1>
             <p class="lead">Véhicule: {{ $vehicle->brand }} {{ $vehicle->model }}</p>
@@ -37,6 +43,7 @@
 
             </div>
         </div>
+        @endauth
     </div>
 </div>
 </div>

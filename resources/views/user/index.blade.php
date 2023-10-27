@@ -6,7 +6,7 @@
 
         <div class="col-lg-10">
             <h3>Pro-Auto Experts</h3>
-            <h4>Système de gestions des réparations automobiles</h4>
+            <h4>Système de gestion des réparations automobiles</h4>
         </div>
 
         <div class="col-lg-2">
@@ -28,7 +28,13 @@
 
 <br />
 <div class="container">
+        @guest
+        <h1>Connexion requise.</h1>
+        <p class="lead">Veuillez vous connecter ou créer un compte afin d'accéder à la page.</p>
+        @endguest
+
     <div class="row">
+        @auth
         @foreach ($users as $index => $user)
         <div class="col-md-4">
             <div class="card card-body">
@@ -43,6 +49,7 @@
             </div>
         </div>
         @endforeach
+        @endauth
     </div>
 </div>
 

@@ -23,7 +23,7 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 
 Route::controller(RepairController::class)->group(function () {
-    Route::resource('repairs', RepairController::class);
+    //Route::resource('repairs', RepairController::class);
 
     Route::get('/', 'index');
     Route::get('/repair/create', 'create');
@@ -36,7 +36,7 @@ Route::controller(RepairController::class)->group(function () {
 });
 
 Route::controller(VehicleController::class)->group(function () {
-    Route::resource('vehicles', VehicleController::class);
+    //Route::resource('vehicles', VehicleController::class);
 
     Route::get('/vehicle', 'index');
     Route::get('/vehicle/create', 'create');
@@ -49,9 +49,9 @@ Route::controller(VehicleController::class)->group(function () {
 });
 
 Route::controller(UserController::class)->group(function () {
-    Route::resource('users', UserController::class);
+    //Route::resource('users', UserController::class);
 
-    Route::get('/user', 'index');
+    Route::get('/user', 'index')->middleware(['auth','verified']);
     Route::get('/user/create', 'create');
     Route::get('/user/{id}', 'show');
     //Route::get('/user/{id}/edit', 'edit');
@@ -66,13 +66,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth','verified'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+//require __DIR__.'/auth.php';
 
-Auth::routes();
-
-
-
-/*
 Route::get('/email/verify', function () {
     return view('auth.verify-email');
 })->middleware('auth')->name('verification.notice');
@@ -87,8 +82,29 @@ Route::post('/email/verification-notification', function (Request $request) {
     $request->user()->sendEmailVerificationNotification();
  
     return back()->with('message', 'Verification link sent!');
-})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
-*/
+})->middleware(['auth', 'throttle:6,1'])->name('verification.resend');
+
+Auth::routes();
+
+
+
+
+// Route::get('/email/verify', function () {
+//     return view('auth.verify-email');
+// })->middleware('auth')->name('verification.notice');
+
+// Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+//     $request->fulfill();
+ 
+//     return redirect('/home');
+// })->middleware(['auth', 'signed'])->name('verification.verify');
+
+// Route::post('/email/verification-notification', function (Request $request) {
+//     $request->user()->sendEmailVerificationNotification();
+ 
+//     return back()->with('message', 'Verification link sent!');
+// })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+
 
 
 

@@ -40,11 +40,11 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/vehicles">Véhicules</a>
+                            <a class="nav-link" aria-current="page" href="/vehicle">Véhicules</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/users">Utilisateurs</a>
+                            <a class="nav-link" aria-current="page" href="/user">Utilisateurs</a>
                         </li>
                     </ul>
 

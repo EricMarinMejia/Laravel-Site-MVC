@@ -70,11 +70,6 @@ Route::controller(UserController::class)->group(function () {
 });
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth','verified'])->name('dashboard');
-
-
 //Routes pour la vérification d'email
 Route::get('/email/verify', function () {
     return view('auth.verify-email');

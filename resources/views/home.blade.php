@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{ __('Succès') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,11 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('Vérification de courriel complétée!') }}
+
+                    <div class="col-lg-2">
+                        <a class="btn btn-primary" href="{{ url('/') }}">Page d'accueil</a>
+                    </div>
                 </div>
             </div>
         </div>

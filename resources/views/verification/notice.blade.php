@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
 
-
-
-
 @section('content')
 
     <div class="bg-light p-5 rounded">
@@ -15,11 +12,11 @@
 			</div>
 		@endif
 
-		Before proceeding, please check your email for a verification link. If you did not receive the email,
+		Avant de continuer, veuillez consulter votre boîte à courriels pour un lien de vérification. Si vous n'avez pas reçu de lien,
 		<form action="{{ route('verification.resend') }}" method="POST" class="d-inline">
 			@csrf
 			<button type="submit" class="d-inline btn btn-link p-0">
-				click here to request another
+				cliquez ici pour renvoyer un autre
 			</button>.
 		</form>
 	</div>

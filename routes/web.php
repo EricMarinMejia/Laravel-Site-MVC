@@ -25,38 +25,38 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 Route::controller(RepairController::class)->group(function () {
     //Route::resource('repairs', RepairController::class);
 
-    Route::get('/', 'index');
-    Route::get('/repair/create', 'create');
-    Route::get('/repair/{id}', 'show');
-    Route::get('/repair/{id}/edit', 'edit');
+    Route::get('/', 'index')->middleware(['auth','verified']);
+    Route::get('/repair/create', 'create')->middleware(['auth','verified']);
+    Route::get('/repair/{id}', 'show')->middleware(['auth','verified']);
+    Route::get('/repair/{id}/edit', 'edit')->middleware(['auth','verified']);
 
-    Route::post('/repair', 'store');
-    Route::patch('/repair/{id}', 'update');
-    Route::delete('/repair/{id}', 'destroy');
+    Route::post('/repair', 'store')->middleware(['auth','verified']);
+    Route::patch('/repair/{id}', 'update')->middleware(['auth','verified']);
+    Route::delete('/repair/{id}', 'destroy')->middleware(['auth','verified']);
 });
 
 Route::controller(VehicleController::class)->group(function () {
     //Route::resource('vehicles', VehicleController::class);
 
-    Route::get('/vehicle', 'index');
-    Route::get('/vehicle/create', 'create');
-    Route::get('/vehicle/{id}', 'show');
-    Route::get('/vehicle/{id}/edit', 'edit');
+    Route::get('/vehicle', 'index')->middleware(['auth','verified']);
+    Route::get('/vehicle/create', 'create')->middleware(['auth','verified']);
+    Route::get('/vehicle/{id}', 'show')->middleware(['auth','verified']);
+    Route::get('/vehicle/{id}/edit', 'edit')->middleware(['auth','verified']);
 
-    Route::post('/vehicle', 'store');
-    Route::patch('/vehicle/{id}', 'update');
-    Route::delete('/vehicle/{id}', 'destroy');
+    Route::post('/vehicle', 'store')->middleware(['auth','verified']);
+    Route::patch('/vehicle/{id}', 'update')->middleware(['auth','verified']);
+    Route::delete('/vehicle/{id}', 'destroy')->middleware(['auth','verified']);
 });
 
 Route::controller(UserController::class)->group(function () {
     //Route::resource('users', UserController::class);
 
     Route::get('/user', 'index')->middleware(['auth','verified']);
-    Route::get('/user/create', 'create');
-    Route::get('/user/{id}', 'show');
+    Route::get('/user/create', 'create')->middleware(['auth','verified']);
+    Route::get('/user/{id}', 'show')->middleware(['auth','verified']);
     //Route::get('/user/{id}/edit', 'edit');
 
-    Route::post('/user', 'store');
+    Route::post('/user', 'store')->middleware(['auth','verified']);
     //Route::patch('/user/{id}', 'update');
     //Route::delete('/user/{id}', 'destroy');
 });

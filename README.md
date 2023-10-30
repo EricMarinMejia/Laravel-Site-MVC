@@ -1,6 +1,7 @@
 <h1>Pour lancer le projet</h1>
 <ol>
-    <li>Télécharger Ampps ou tout autre service Apache/PHP/MYSQL</li>
+    <li>Télécharger Ampps ou tout autre service Apache/PHP/MYSQL <code>https://ampps.com/</code></li>
+    <li>Télécharger Composer <code>https://getcomposer.org/</code></li>
     <li>Cloner le projet dans le sous dossier <code>Ampps\www</code></li>
     <li>Lancer les commandes suivantes à la racine du projet
         <ol>

@@ -6,7 +6,7 @@
         <ol>
             <li>Installation des dépendances : <code>composer install</code></li>
             <li>Migration de la base de données : <code>php artisan migrate</code></li>
-            <li>Lancer sur le navigateur http://127.0.0.1:8000/ : <code>php artisan serve</code></li>
+            <li>Démarrage sur le navigateur http://127.0.0.1:8000/ : <code>php artisan serve</code></li>
         </ol>
     </li>
 </ol>

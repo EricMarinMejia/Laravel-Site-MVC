@@ -3,13 +3,6 @@
 
 @section('content')
 
-    @guest
-    <h1>Connexion requise.</h1>
-    <p class="lead">Veuillez vous connecter ou créer un compte afin d'accéder à la page.</p>
-    @endguest
-
-
-    @auth
     <h1>Ajouter une réparation</h1>
 
 
@@ -73,6 +66,5 @@
         <button type="submit" class="btn btn-primary">Enregister</button>
 
     </form>
-    @endauth
 
 @endsection

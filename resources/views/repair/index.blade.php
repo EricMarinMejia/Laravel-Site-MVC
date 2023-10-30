@@ -28,14 +28,7 @@
 
 <br />
 <div class="container">
-
-        @guest
-        <h1>Connexion requise.</h1>
-        <p class="lead">Veuillez vous connecter ou créer un compte afin d'accéder à la page.</p>
-        @endguest
-
     <div class="row">
-        @auth
         @foreach ($repairs as $index => $repair)
         <div class="col-md-4">
             <div class="card card-body">
@@ -50,7 +43,6 @@
             </div>
         </div>
         @endforeach
-        @endauth
     </div>
 </div>
 

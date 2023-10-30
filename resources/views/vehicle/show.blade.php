@@ -5,13 +5,7 @@
 
 <div class="container">
 
-    @guest
-    <h1>Connexion requise.</h1>
-    <p class="lead">Veuillez vous connecter ou créer un compte afin d'accéder à la page.</p>
-    @endguest
-
     <div class="row">
-        @auth
         <div class="col-md-12">
             <h1>Détails pour le véhicule #{{ $vehicle->id }}</h1>
             <p class="lead">Propriétaire: {{ $user->first_name }} {{ $user->last_name }}</p>
@@ -27,24 +21,24 @@
                 <h4>Historique des réparations</h4>
                 <div class="list-group">
                     @foreach($repairs as $repair)
-                    <a href="{{ url('repair/'. $repair->id) }}" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                        <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
-                        <div class="d-flex gap-2 w-100 justify-content-between">
-                            <div>
+                        <a href="{{ url('repair/'. $repair->id) }}" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                            <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                <div>
                                 <h6 class="mb-0">{{ $repair->description }}</h6>
                                 <p class="mb-0 opacity-75">{{ $repair->date_start }} - {{ $repair->date_end }}</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
                     @endforeach
                 </div>
             </div>
 
             <br />
             <form action="{{ url('user/'. $user->id) }}" style="display: inline">
-                <button type="submit" class="btn btn-primary d-inline-flex align-items-center">
-                    Voir l'utilisateur #{{ $user->id }}: {{ $user->first_name }} {{ $user->last_name }}
-                </button>
+                    <button type="submit" class="btn btn-primary d-inline-flex align-items-center">
+                        Voir l'utilisateur #{{ $user->id }}: {{ $user->first_name }} {{ $user->last_name }}
+                    </button>
             </form>
             <br />
             <br />
@@ -58,7 +52,6 @@
                 </form>
             </div>
         </div>
-        @endauth
     </div>
 </div>
 </div>

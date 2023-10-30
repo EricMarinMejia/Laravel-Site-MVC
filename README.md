@@ -3,12 +3,14 @@
     <li>Cloner le projet</li>
     <li>Lancer les commandes suivantes à la racine du projet
         <ol>
-            <li>Installation des dépendances : composer install</li>
-            <li>Migration de la base de données : php artisan migrate</li>
-            <li>Lancer sur le navigateur http://127.0.0.1:8000/ : php artisan serve</li>
+            <li>Installation des dépendances : <code>composer install</code></li>
+            <li>Migration de la base de données : <code>php artisan migrate</code></li>
+            <li>Lancer sur le navigateur http://127.0.0.1:8000/ : <code>php artisan serve</code></li>
         </ol>
     </li>
 </ol>
+
+<hr />
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>

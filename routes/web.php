@@ -54,7 +54,7 @@ Route::controller(UserController::class)->group(function () {
     //Not yet implemented routes - not part of the course outline
     //Route::get('/user/{id}/edit', 'edit');
     //Route::patch('/user/{id}', 'update');
-    //Route::delete('/user/{id}', 'destroy');
+    //Route::delete('/user/{id}', 'destroy'); 
 });
 
 

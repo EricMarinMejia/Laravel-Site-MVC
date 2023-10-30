@@ -66,6 +66,12 @@
             <input type="number" min=0 class="form-control" id="kilometers" placeholder="Kilometrage" name="kilometers" value="{{ $vehicle->kilometers }}" />
         </div>
 
+
+        <div class="form-group mb-3">
+            <label for="image">Photo du véhicule:</label>
+            <input type="file" class="form-control" id="image" placeholder="image" name="image" value="{{ $vehicle->image }}"/>
+        </div>
+
         <button type="submit" class="btn btn-primary">Enregistrer</button>
 
     </form>

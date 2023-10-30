@@ -65,6 +65,12 @@
         </div>
 
 
+        <div class="form-group mb-3">
+            <label for="image">Photo du véhicule:</label>
+            <input type="file" class="form-control" id="image" placeholder="image" name="image" />
+        </div>
+
+
         <button type="submit" class="btn btn-primary">Enregister</button>
 
     </form>

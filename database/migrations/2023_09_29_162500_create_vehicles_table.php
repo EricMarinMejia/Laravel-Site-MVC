@@ -20,6 +20,7 @@ class CreateVehiclesTable extends Migration
             $table->string("model");
             $table->string("license_plate");
             $table->integer("kilometers");
+            $table->string("image")->nullable();
         });
     }
 

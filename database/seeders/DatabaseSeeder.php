@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,11 +21,11 @@ class DatabaseSeeder extends Seeder
             'first_name'=> 'Jack',
             'address'=> '123 rue Laravel',
             'age'=>18,
-            'phone_number'=>'438-572-1616',
+            'phone_number'=>'999-999-9999',
             'email'=>'jackdespatie@gmail.com',
-            'email_verified_at'=>'',
-            'password'=>'123',
-            'remember_token'=>'123',
+            'email_verified_at'=>now(),
+            'password'=>Hash::make('12345678'),
+            'remember_token'=>'',
             'created_at'=> now(),
             'updated_at'=> now()
         ]
@@ -39,7 +40,8 @@ class DatabaseSeeder extends Seeder
             'brand'=>'Toyota',
             'model'=>'F-150 2021',
             'license_plate'=>'156 AJK',
-            'kilometers'=>80000
+            'kilometers'=>80000,
+            'image'=>null
         ]
         );
 

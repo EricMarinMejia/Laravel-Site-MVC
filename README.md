@@ -1,7 +1,7 @@
 <h1>Pour lancer le projet</h1>
 <ol>
-    <li>Télécharger <a href="https://ampps.com/">Ampps</a> ou tout autre service Apache/PHP/MYSQL</li>
-    <li>Télécharger <a href="https://getcomposer.org/">Composer</a></li>
+    <li>Télécharger <a href="https://ampps.com/" target="_blank">Ampps</a> ou tout autre service Apache/PHP/MYSQL</li>
+    <li>Télécharger <a href="https://getcomposer.org/" target="_blank">Composer</a></li>
     <li>Cloner le projet dans le sous dossier <code>Ampps\www</code></li>
     <li>Lancer les commandes suivantes à la racine du projet
         <ol>

@@ -97,7 +97,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 
-//Retourne à / si la route n'existe pas
+//Retourne à / si la route n'existe pas  
 Route::get('/{any}', function () {
     return redirect('/');
 })->where('any', '.*');

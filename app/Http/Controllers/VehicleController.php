@@ -52,22 +52,39 @@ class VehicleController extends Controller
         ]);
 
 
-        if ($request->file('image')->isValid()) {
-            $image = $request->file('image');
-            $filename = time() . '.' . $image->getClientOriginalExtension();
-            $path = $image->storeAs('images/upload', $filename, 'public');
-        }
+        if ($request->file('image') != null) {
 
-        $vehicle = new vehicle([
-            'created_at'=>$today,
-            'updated_at'=>$today,
-            'user_id'=>$request->get('user_id'),
-            'brand'=>$request->get('brand'),
-            'model'=>$request->get('model'),
-            'license_plate'=>$request->get('license_plate'),
-            'kilometers'=>$request->get('kilometers'),
-            'image'=>$filename
-        ]);
+            if ($request->file('image')->isValid()) {
+                $image = $request->file('image');
+                $filename = time() . '.' . $image->getClientOriginalExtension();
+                $path = $image->storeAs('images/upload', $filename, 'public');
+            }
+
+            $vehicle = new vehicle([
+                'created_at'=>$today,
+                'updated_at'=>$today,
+                'user_id'=>$request->get('user_id'),
+                'brand'=>$request->get('brand'),
+                'model'=>$request->get('model'),
+                'license_plate'=>$request->get('license_plate'),
+                'kilometers'=>$request->get('kilometers'),
+                'image'=>$filename
+            ]);
+
+        } else {
+
+            $vehicle = new vehicle([
+                'created_at'=>$today,
+                'updated_at'=>$today,
+                'user_id'=>$request->get('user_id'),
+                'brand'=>$request->get('brand'),
+                'model'=>$request->get('model'),
+                'license_plate'=>$request->get('license_plate'),
+                'kilometers'=>$request->get('kilometers'),
+                'image'=>null
+            ]);
+            
+        }
 
         $vehicle->save();
         return redirect('/vehicle')->with('success', 'véhicule ajoutée avec succès');
@@ -120,21 +137,26 @@ class VehicleController extends Controller
             'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
         ]);
 
-        if ($request->file('image')->isValid()) {
-            $image = $request->file('image');
-            $filename = time() . '.' . $image->getClientOriginalExtension();
-            $path = $image->storeAs('images/upload', $filename, 'public');
-        }
-
         $vehicle = Vehicle::findOrFail($id);
 
+        if ($request->file('image') != null) {
+
+            if ($request->file('image')->isValid()) {
+                $image = $request->file('image');
+                $filename = time() . '.' . $image->getClientOriginalExtension();
+                $path = $image->storeAs('images/upload', $filename, 'public');
+            }
+            $vehicle->image = $filename;
+
+        }
+
+        
         $vehicle->updated_at = $today;
         $vehicle->user_id = $request->get('user_id');
         $vehicle->brand = $request->get('brand');
         $vehicle->model = $request->get('model');
         $vehicle->license_plate = $request->get('license_plate');
         $vehicle->kilometers = $request->get('kilometers');
-        $vehicle->image = ($request->get('image'));
 
         $vehicle->update();
         return redirect('/vehicle')->with('success', 'véhicule modifié avec succès');

@@ -30,7 +30,7 @@
 
         <div class="form-group mb-3">
             <label for="brand">Marque:</label>
-            <select name="brand" id="brand" class="form-control">
+            <select name="brand" id="brand" class="form-control" value="Audi">
                 <option value="Audi">Audi</option>
                 <option value="BMW">BMW</option>
                 <option value="Ford">Ford</option>

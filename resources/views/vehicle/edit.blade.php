@@ -21,7 +21,7 @@
 
     @endif
 
-    <form method="post" action="{{ url('vehicle/'. $vehicle->id) }}" >
+    <form method="post" action="{{ url('vehicle/'. $vehicle->id) }}" enctype="multipart/form-data" >
         @method('PATCH')
         @csrf
 
@@ -45,6 +45,7 @@
                 <option value="Nissan">Nissan</option>
                 <option value="Tesla">Tesla</option>
                 <option value="Toyota">Toyota</option>
+                <option hidden value="{{ $vehicle->brand }}" selected>{{ $vehicle->brand }}</option>
             </select>
         </div>
 
@@ -69,7 +70,7 @@
 
         <div class="form-group mb-3">
             <label for="image">Photo du véhicule:</label>
-            <input type="file" class="form-control" id="image" placeholder="image" name="image" value="{{ $vehicle->image }}"/>
+            <input type="file" class="form-control" id="image" placeholder="image" name="image" enctype="multipart/form-data" />
         </div>
 
         <button type="submit" class="btn btn-primary">Enregistrer</button>

@@ -34,11 +34,10 @@
             <div class="card card-body">
                 <a href="{{ url('user/'. $user->id) }}">
                 <h2>
-                    Utilisateur #{{ $user->id }}
+                    {{ $user->first_name }} {{ $user->last_name }}
                 </h2>
                 </a>
-            <p><strong>{{ $user->first_name }} {{ $user->last_name }}</strong></p>
-            <p>{{ $user->email }}</p>
+            <p><strong>{{ $user->email }}</strong></p>
             <a href="{{ url('user/'. $user->id) }}" class="btn btn-outline-primary">Voir les détails</a>
             </div>
         </div>

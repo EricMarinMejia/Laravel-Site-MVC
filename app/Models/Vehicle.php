@@ -16,7 +16,8 @@ class Vehicle extends Model
         'brand',
         'model',
         'license_plate',
-        'kilometers'
+        'kilometers',
+        'image'
     ];
 
     public function repairs()

@@ -20,7 +20,7 @@
 
     @endif
 
-    <form action="{{ url('vehicle') }}" method="POST">
+    <form action="{{ url('vehicle') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <div class="form-group mb-3">
@@ -67,7 +67,7 @@
 
         <div class="form-group mb-3">
             <label for="image">Photo du véhicule:</label>
-            <input type="file" class="form-control" id="image" placeholder="image" name="image" />
+            <input type="file" class="form-control" id="image" placeholder="image" name="image" enctype="multipart/form-data" />
         </div>
 
 

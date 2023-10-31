@@ -6,6 +6,7 @@ use App\Models\Repair;
 use Illuminate\Http\Request;
 use App\Models\Vehicle;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class VehicleController extends Controller
 {
@@ -39,9 +40,6 @@ class VehicleController extends Controller
      */
     public function store(Request $request)
     {
-        //TODO Currently using UTC time. Should be using EAST TIME
-        //TODO check if date_start is before date_end
-        //TODO check if the vehicle_id exists
         $today = now();
 
         $request->validate([
@@ -49,8 +47,16 @@ class VehicleController extends Controller
             'brand'=>'required',
             'model'=>'required',
             'license_plate'=>'required',
-            'kilometers'=>'required'
+            'kilometers'=>'required',
+            'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
         ]);
+
+
+        if ($request->file('image')->isValid()) {
+            $image = $request->file('image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $path = $image->storeAs('images/upload', $filename, 'public');
+        }
 
         $vehicle = new vehicle([
             'created_at'=>$today,
@@ -59,7 +65,8 @@ class VehicleController extends Controller
             'brand'=>$request->get('brand'),
             'model'=>$request->get('model'),
             'license_plate'=>$request->get('license_plate'),
-            'kilometers'=>$request->get('kilometers')
+            'kilometers'=>$request->get('kilometers'),
+            'image'=>$filename
         ]);
 
         $vehicle->save();
@@ -102,9 +109,6 @@ class VehicleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //TODO Currently using UTC time. Should be using EAST TIME
-        //TODO check if date_start is before date_end
-        //TODO check if the vehicle_id exists
         $today = now();
 
         $request->validate([
@@ -112,8 +116,15 @@ class VehicleController extends Controller
             'brand'=>'required',
             'model'=>'required',
             'license_plate'=>'required',
-            'kilometers'=>'required'
+            'kilometers'=>'required',
+            'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
         ]);
+
+        if ($request->file('image')->isValid()) {
+            $image = $request->file('image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $path = $image->storeAs('images/upload', $filename, 'public');
+        }
 
         $vehicle = Vehicle::findOrFail($id);
 
@@ -123,6 +134,7 @@ class VehicleController extends Controller
         $vehicle->model = $request->get('model');
         $vehicle->license_plate = $request->get('license_plate');
         $vehicle->kilometers = $request->get('kilometers');
+        $vehicle->image = ($request->get('image'));
 
         $vehicle->update();
         return redirect('/vehicle')->with('success', 'véhicule modifié avec succès');

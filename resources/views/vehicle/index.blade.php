@@ -29,20 +29,38 @@
 <br />
 <div class="container">
     <div class="row">
-        @foreach ($vehicles as $index => $vehicle)
-        <div class="col-md-4">
-            <div class="card card-body">
-                <a href="{{ url('vehicle/'. $vehicle->id) }}">
-                <h2>
-                    Véhicule #{{ $vehicle->id }}
-                </h2>
-                </a>
-            <p><strong>{{ $vehicle->license_plate }}</strong></p>
-            <p>{{ $vehicle->brand }} {{ $vehicle->model }}</p>
-            <a href="{{ url('vehicle/'. $vehicle->id) }}" class="btn btn-outline-primary">Voir les détails</a>
+
+        <div class="album py-5 bg-body-tertiary">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    @foreach ($vehicles as $index => $vehicle)
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            @if ($vehicle->image != null)
+                                <img src="{{ asset('storage/images/upload/'. $vehicle->image) }}" alt="{{ $vehicle->image }}" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" />
+                            @endif
+                            @if ($vehicle->image == null)
+                            <img src="{{ asset('storage/images/default/defaultCarLogo.png') }}" alt="{{ $vehicle->image }}" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" />
+                            @endif
+
+                            <div class="card-body">
+                                <p class="card-text">{{ $vehicle->license_plate }}</p>
+                                <p class="card-text">{{ $vehicle->brand }} {{ $vehicle->model }}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="{{ url('vehicle/'. $vehicle->id) }}" class="btn btn-sm btn-outline-secondary">Voir les détails</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
             </div>
         </div>
-        @endforeach
+
+
     </div>
 </div>
 

@@ -8,6 +8,7 @@
             <li>Installation des dépendances : <code>composer install</code></li>
             <li>Migration de la base de données : <code>php artisan migrate</code></li>
             <li>[OPTIONNEL] Générer des données de test dans la base de données : <code>php artisan db:seed</code></li>
+            <li>Création du lien symbiotique pour le téléversement d'image dans storage/public/ : <code>php artisan storage:link</code></li>
             <li>Démarrage sur le navigateur http://127.0.0.1:8000/ : <code>php artisan serve</code></li>
         </ol>
     </li>

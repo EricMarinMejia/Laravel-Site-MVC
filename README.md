@@ -2,13 +2,13 @@
 <ol>
     <li>Télécharger <a href="https://ampps.com/" target="_blank">Ampps</a> ou tout autre service Apache/PHP/MYSQL</li>
     <li>Télécharger <a href="https://getcomposer.org/" target="_blank">Composer</a></li>
-    <li>Cloner le projet dans le sous dossier <code>Ampps\www</code></li>
+    <li>Cloner le projet dans le sous dossier <samp>Ampps/www/</samp></li>
     <li>Lancer les commandes suivantes à la racine du projet
         <ol>
             <li>Installation des dépendances : <code>composer install</code></li>
             <li>Migration de la base de données : <code>php artisan migrate</code></li>
             <li>[OPTIONNEL] Générer des données de test dans la base de données : <code>php artisan db:seed</code></li>
-            <li>Création du lien symbiotique pour le téléversement d'image dans storage/public/ : <code>php artisan storage:link</code></li>
+            <li>Création du lien symbiotique pour le téléversement d'image dans <samp>storage/public/</samp> : <code>php artisan storage:link</code></li>
             <li>Démarrage sur le navigateur http://127.0.0.1:8000/ : <code>php artisan serve</code></li>
         </ol>
     </li>

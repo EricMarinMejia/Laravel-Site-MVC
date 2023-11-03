@@ -29,6 +29,7 @@
 <br />
 <div class="container">
     <div class="row">
+        <h1>{{ __('Bonjour') }}</h1>
         @foreach ($repairs as $index => $repair)
         <div class="col-md-4">
             <div class="card card-body">

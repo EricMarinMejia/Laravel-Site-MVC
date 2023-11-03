@@ -7,10 +7,13 @@
     <li>Lancer les commandes suivantes à la racine du projet
         <ol>
             <li>Installation des dépendances : <code>composer install</code></li>
-            <li>Créer le fichier .env à la racine du projet : <code>cp .\.env.example .env</code></li>
-            <li>Générer la clée pour le fichier .env : <code>php artisan key:generate</code></li>
-            <li>Modifier les champs <samp>DB_DATABASE, DB_USERNAME</samp> et <samp>DB_PASSWORD</samp> dans le fichier .env</li>
-            <li>Modifier les détails du fichier .env pour le service de messagerie mail. À but de testing, utiliser <a href="https://mailtrap.io/">MailTrap</a></li>
+            <li>Création du fichier .env : <code>cp .\.env.example .env</code>
+                <ol>
+                    <li>Générer dela clée pour le fichier .env : <code>php artisan key:generate</code></li>
+                    <li>Modifier les champs <samp>DB_DATABASE, DB_USERNAME</samp> et <samp>DB_PASSWORD</samp> dans le fichier .env</li>
+                    <li>Modifier les détails du fichier .env pour le service de messagerie mail. À but de testing, utiliser <a href="https://mailtrap.io/">MailTrap</a></li>
+                </ol>
+            </li>
             <li>Migration de la base de données : <code>php artisan migrate</code></li>
             <li>[OPTIONNEL] Générer des données de test dans la base de données : <code>php artisan db:seed</code></li>
             <li>Création du lien symbiotique pour le téléversement d'image dans <samp>storage/public/</samp> : <code>php artisan storage:link</code></li>

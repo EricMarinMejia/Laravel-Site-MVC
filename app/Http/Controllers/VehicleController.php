@@ -43,11 +43,11 @@ class VehicleController extends Controller
         $today = now();
 
         $request->validate([
-            'user_id'=>'required',
-            'brand'=>'required',
-            'model'=>'required',
-            'license_plate'=>'required',
-            'kilometers'=>'required',
+            'user_id' => 'required',
+            'brand' => 'required',
+            'model' => 'required',
+            'license_plate' => 'required',
+            'kilometers' => 'required',
             'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
         ]);
 
@@ -61,29 +61,27 @@ class VehicleController extends Controller
             }
 
             $vehicle = new vehicle([
-                'created_at'=>$today,
-                'updated_at'=>$today,
-                'user_id'=>$request->get('user_id'),
-                'brand'=>$request->get('brand'),
-                'model'=>$request->get('model'),
-                'license_plate'=>$request->get('license_plate'),
-                'kilometers'=>$request->get('kilometers'),
-                'image'=>$filename
+                'created_at' => $today,
+                'updated_at' => $today,
+                'user_id' => $request->get('user_id'),
+                'brand' => $request->get('brand'),
+                'model' => $request->get('model'),
+                'license_plate' => $request->get('license_plate'),
+                'kilometers' => $request->get('kilometers'),
+                'image' => $filename
             ]);
-
         } else {
 
             $vehicle = new vehicle([
-                'created_at'=>$today,
-                'updated_at'=>$today,
-                'user_id'=>$request->get('user_id'),
-                'brand'=>$request->get('brand'),
-                'model'=>$request->get('model'),
-                'license_plate'=>$request->get('license_plate'),
-                'kilometers'=>$request->get('kilometers'),
-                'image'=>null
+                'created_at' => $today,
+                'updated_at' => $today,
+                'user_id' => $request->get('user_id'),
+                'brand' => $request->get('brand'),
+                'model' => $request->get('model'),
+                'license_plate' => $request->get('license_plate'),
+                'kilometers' => $request->get('kilometers'),
+                'image' => null
             ]);
-            
         }
 
         $vehicle->save();
@@ -129,28 +127,26 @@ class VehicleController extends Controller
         $today = now();
 
         $request->validate([
-            'user_id'=>'required',
-            'brand'=>'required',
-            'model'=>'required',
-            'license_plate'=>'required',
-            'kilometers'=>'required',
+            'user_id' => 'required',
+            'brand' => 'required',
+            'model' => 'required',
+            'license_plate' => 'required',
+            'kilometers' => 'required',
             'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
         ]);
 
         $vehicle = Vehicle::findOrFail($id);
 
         if ($request->file('image') != null) {
-
             if ($request->file('image')->isValid()) {
                 $image = $request->file('image');
                 $filename = time() . '.' . $image->getClientOriginalExtension();
                 $path = $image->storeAs('images/upload', $filename, 'public');
             }
             $vehicle->image = $filename;
-
         }
 
-        
+
         $vehicle->updated_at = $today;
         $vehicle->user_id = $request->get('user_id');
         $vehicle->brand = $request->get('brand');

@@ -3,6 +3,7 @@
     <li>Télécharger <a href="https://ampps.com/" target="_blank">Ampps</a> ou tout autre service Apache/PHP/MYSQL</li>
     <li>Télécharger <a href="https://getcomposer.org/" target="_blank">Composer</a></li>
     <li>Cloner le projet dans le sous dossier <samp>Ampps/www/</samp></li>
+    <li>Démarrer Ampps et lancer le serveur Apache et MySQL</li>
     <li>Lancer les commandes suivantes à la racine du projet
         <ol>
             <li>Installation des dépendances : <code>composer install</code></li>

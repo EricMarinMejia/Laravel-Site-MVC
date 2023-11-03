@@ -9,9 +9,9 @@
             <li>Installation des dépendances : <code>composer install</code></li>
             <li>Création du fichier .env : <code>cp .\.env.example .env</code>
                 <ol>
-                    <li>Générer dela clée pour le fichier .env : <code>php artisan key:generate</code></li>
-                    <li>Modifier les champs <samp>DB_DATABASE, DB_USERNAME</samp> et <samp>DB_PASSWORD</samp> dans le fichier .env</li>
-                    <li>Modifier les détails du fichier .env pour le service de messagerie mail. À but de testing, utiliser <a href="https://mailtrap.io/">MailTrap</a></li>
+                    <li>Générer la clée d'application : <code>php artisan key:generate</code></li>
+                    <li>Ajouter les détails de votre base de données pour les champs <samp>DB_DATABASE, DB_USERNAME</samp> et <samp>DB_PASSWORD</samp></li>
+                    <li>Modifier les détails pour le service de messagerie mail. À but de testing, utiliser <a href="https://mailtrap.io/">MailTrap</a></li>
                 </ol>
             </li>
             <li>Migration de la base de données : <code>php artisan migrate</code></li>

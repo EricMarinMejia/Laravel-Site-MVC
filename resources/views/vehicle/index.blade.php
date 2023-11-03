@@ -38,10 +38,10 @@
                     <div class="col">
                         <div class="card shadow-sm">
                             @if ($vehicle->image != null)
-                                <img src="{{ asset('storage/images/upload/'. $vehicle->image) }}" alt="{{ $vehicle->image }}" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" />
+                                <img src="{{ asset('storage/images/upload/'. $vehicle->image) }}" alt="Aucune image disponible" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" />
                             @endif
                             @if ($vehicle->image == null)
-                                <img src="{{ asset('storage/images/default/defaultCarLogo.png') }}" alt="{{ $vehicle->image }}" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" />
+                                <img src="{{ asset('storage/images/default/defaultCarLogo.png') }}" alt="Aucune image disponible" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" />
                             @endif
 
                             <div class="card-body">

@@ -7,6 +7,7 @@ use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use App\Http\Controllers\LocalizationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,8 +89,12 @@ Route::post('/email/verification-notification', function (Request $request) {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware(['auth', 'verified']);
 
 
-//Routes for Authentification
+//Routes pour l'authentification
 Auth::routes();
+
+
+//Routes pour les traductions
+Route::get('lang/{locale}', [App\Http\Controllers\LocalizationController::class, 'index']);
 
 
 //Retourne à / si la route n'existe pas  

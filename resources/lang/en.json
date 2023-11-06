@@ -1,3 +1,36 @@
 {
-    "Bonjour" : "Hello"
+
+    "Bonjour" : "Hello",
+    "Succès" : "Success",
+    "Vérification de courriel complétée!" : "Email verification completed!",
+    "Page d'accueil" : "Home page",
+
+
+    "Détails pour le véhicule" : "Details for vehicle",
+    "Propriétaire" : "Owner",
+    "Marque" : "Brand",
+    "Modèle" : "Model",
+    "Plaque d'immatriculation" : "License plate",
+    "Kilometrage" : "Kilometers",
+    "Entrée créer le" : "Entry's creation date",
+    "Dernière modification de l'entrée" : "Entry's last modification date",
+    "Historique des réparations" : "Repair history",
+    "Voir l'utilisateur" : "See owner's profile",
+    "Modifier" : "Modify",
+    "Supprimer" : "Delete",
+
+
+    "Système de gestion des réparations automobiles" : "Automotive Repair Management System",
+    "Ajouter un véhicule" : "Add a vehicle",
+    "Aucune image disponible" : "Image not available",
+    "Voir les détails" : "See details",
+
+    "Modifier véhicule" : "Modify vehicle",
+    "ID du propriétaire" : "Owner's ID",
+    "Plaque d'immatriculation (format AAA 123)" : "License plate (format AAA 123)",
+    "Photo du véhicule" : "Picture of the vehicle",
+    "Enregistrer" : "Save",
+
+    "Plaque immatriculation (format AAA 123)" : "License plate (format AAA 123)"
+
 }

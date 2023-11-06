@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <h1>Ajouter un véhicule</h1>
+    <h1>{{ __("Ajouter un véhicule") }}</h1>
 
 
     @if ($errors->any())
@@ -24,12 +24,12 @@
         @csrf
 
         <div class="form-group mb-3">
-            <label for="user_id">Id du propriétaire:</label>
-            <input type="number" min=0 class="form-control" id="user_id" placeholder="Id du propriétaire" name="user_id" />
+            <label for="user_id">{{ __("ID du propriétaire") }}:</label>
+            <input type="number" min=0 class="form-control" id="user_id" placeholder="{{ __('ID du propriétaire') }}" name="user_id" />
         </div>
 
         <div class="form-group mb-3">
-            <label for="brand">Marque:</label>
+            <label for="brand">{{ __("Marque") }}:</label>
             <select name="brand" id="brand" class="form-control" value="Audi">
                 <option value="Audi">Audi</option>
                 <option value="BMW">BMW</option>
@@ -48,30 +48,30 @@
 
 
         <div class="form-group mb-3">
-            <label for="model">Modèle:</label>
-            <input name="model" type="text" id="model" class="form-control" placeholder="Modèle" />
+            <label for="model">{{ __("Modèle") }}:</label>
+            <input name="model" type="text" id="model" class="form-control" placeholder="{{ __('Modèle') }}" />
         </div>
 
         
         <div class="form-group mb-3">
-            <label for="license_plate">Plaque (format AAA 123):</label>
-            <input type="text" class="form-control" id="license_plate" placeholder="Plaque" name="license_plate" maxlength="7" />
+            <label for="license_plate">{{ __("Plaque d'immatriculation (format AAA 123)") }}:</label>
+            <input type="text" class="form-control" id="license_plate" placeholder="{{ __('Plaque immatriculation (format AAA 123)') }}" name="license_plate" maxlength="7" />
         </div>
 
 
         <div class="form-group mb-3">
-            <label for="kilometers">Kilometrage:</label>
-            <input type="number" min=0 class="form-control" id="kilometers" placeholder="Kilometrage" name="kilometers" />
+            <label for="kilometers">{{ __("Kilometrage") }}:</label>
+            <input type="number" min=0 class="form-control" id="kilometers" placeholder="{{ __('Kilometrage') }}" name="kilometers" />
         </div>
 
 
         <div class="form-group mb-3">
-            <label for="image">Photo du véhicule:</label>
-            <input type="file" class="form-control" id="image" placeholder="image" name="image" enctype="multipart/form-data" />
+            <label for="image">{{ __("Photo du véhicule") }}:</label>
+            <input type="file" class="form-control" id="image" placeholder="{{ __('Photo du véhicule') }}" name="image" enctype="multipart/form-data" />
         </div>
 
 
-        <button type="submit" class="btn btn-primary">Enregister</button>
+        <button type="submit" class="btn btn-primary">{{ __("Enregistrer") }}</button>
 
     </form>
 

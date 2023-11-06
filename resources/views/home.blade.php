@@ -17,7 +17,7 @@
                     {{ __('Vérification de courriel complétée!') }}
 
                     <div class="col-lg-2">
-                        <a class="btn btn-primary" href="{{ url('/') }}">Page d'accueil</a>
+                        <a class="btn btn-primary" href="{{ url('/') }}">{{ __("Page d'accueil") }}</a>
                     </div>
                 </div>
             </div>

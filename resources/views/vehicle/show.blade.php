@@ -7,18 +7,18 @@
 
     <div class="row">
         <div class="col-md-12">
-            <h1>Détails pour le véhicule #{{ $vehicle->id }}</h1>
-            <p class="lead">Propriétaire: {{ $user->first_name }} {{ $user->last_name }}</p>
-            <p class="lead">Marque: {{ $vehicle->brand }}</p>
-            <p class="lead">Modèle: {{ $vehicle->model }}</p>
-            <p class="lead">Plaque: {{ $vehicle->license_plate }}</p>
-            <p class="lead">Kilometrage: {{ $vehicle->kilometers }} km</p>
+            <h1>{{ __("Détails pour le véhicule") }} #{{ $vehicle->id }}</h1>
+            <p class="lead">{{ __("Propriétaire") }}: {{ $user->first_name }} {{ $user->last_name }}</p>
+            <p class="lead">{{ __("Marque") }}: {{ $vehicle->brand }}</p>
+            <p class="lead">{{ __("Modèle") }}: {{ $vehicle->model }}</p>
+            <p class="lead">{{ __("Plaque d'immatriculation") }}: {{ $vehicle->license_plate }}</p>
+            <p class="lead">{{ __("Kilometrage") }}: {{ $vehicle->kilometers }} km</p>
             <br />
-            <p class="lead">Entrée créer le: {{ $vehicle->created_at }}</p>
-            <p class="lead">Dernière modification de l'entrée: {{ $vehicle->updated_at }}</p>
+            <p class="lead">{{ __("Entrée créer le") }}: {{ $vehicle->created_at }}</p>
+            <p class="lead">{{ __("Dernière modification de l'entrée") }}: {{ $vehicle->updated_at }}</p>
 
             <div>
-                <h4>Historique des réparations</h4>
+                <h4>{{ __("Historique des réparations") }}</h4>
                 <div class="list-group">
                     @foreach($repairs as $repair)
                         <a href="{{ url('repair/'. $repair->id) }}" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
@@ -37,18 +37,18 @@
             <br />
             <form action="{{ url('user/'. $user->id) }}" style="display: inline">
                     <button type="submit" class="btn btn-primary d-inline-flex align-items-center">
-                        Voir l'utilisateur #{{ $user->id }}: {{ $user->first_name }} {{ $user->last_name }}
+                        {{ __("Voir l'utilisateur") }}: {{ $user->first_name }} {{ $user->last_name }}
                     </button>
             </form>
             <br />
             <br />
 
             <div class="buttons">
-                <a href="{{ url('vehicle/'. $vehicle->id .'/edit') }}" class="btn btn-info">Modifier</a>
+                <a href="{{ url('vehicle/'. $vehicle->id .'/edit') }}" class="btn btn-info">{{ __("Modifier") }}</a>
                 <form action="{{ url('vehicle/'. $vehicle->id) }}" method="POST" style="display: inline">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Supprimer</button>
+                    <button type="submit" class="btn btn-danger">{{ __("Supprimer") }}</button>
                 </form>
             </div>
         </div>

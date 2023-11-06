@@ -7,19 +7,19 @@
 
     <div class="row">
         <div class="col-md-12">
-            <h1>Détails pour l'utilisateur #{{ $user->id }}</h1>
-            <p class="lead">Nom complet: {{ $user->first_name }} {{ $user->last_name }}</p>
-            <p class="lead">Adresse: {{ $user->address }}</p>
-            <p class="lead">Âge: {{ $user->age }}</p>
-            <p class="lead">Numéro de téléphone: {{ $user->phone_number }}</p>
-            <p class="lead">Courriel: {{ $user->email }}</p>
+            <h1>{{ __("Détails pour l'utilisateur") }} #{{ $user->id }}</h1>
+            <p class="lead">{{ __("Nom complet") }}: {{ $user->first_name }} {{ $user->last_name }}</p>
+            <p class="lead">{{ __("Adresse") }}: {{ $user->address }}</p>
+            <p class="lead">{{ __("Âge") }}: {{ $user->age }}</p>
+            <p class="lead">{{ __("Numéro de téléphone") }}: {{ $user->phone_number }}</p>
+            <p class="lead">{{ __("Courriel") }}: {{ $user->email }}</p>
             <br />
-            <p class="lead">Entrée créer le: {{ $user->created_at }}</p>
-            <p class="lead">Dernière modification de l'entrée: {{ $user->updated_at }}</p>
+            <p class="lead">{{ __("Entrée créer le") }}: {{ $user->created_at }}</p>
+            <p class="lead">{{ __("Dernière modification de l'entrée") }}: {{ $user->updated_at }}</p>
 
 
             <div>
-                <h4>Liste des véhicules</h4>
+                <h4>{{ __("Liste des véhicules") }}</h4>
                 <div class="list-group">
                     @foreach($vehicles as $vehicle)
                         <a href="{{ url('vehicle/'. $vehicle->id) }}" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
@@ -37,11 +37,11 @@
             <br />
 
             <div class="buttons">
-                <a href="{{ url('user/'. $user->id .'/edit') }}" class="btn btn-info">Modifier</a>
+                <a href="{{ url('user/'. $user->id .'/edit') }}" class="btn btn-info">{{ __("Modifier") }}</a>
                 <form action="{{ url('user/'. $user->id) }}" method="POST" style="display: inline">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Supprimer</button>
+                    <button type="submit" class="btn btn-danger">{{ __("Supprimer") }}</button>
                 </form>
             </div>
         </div>

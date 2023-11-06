@@ -56,23 +56,23 @@
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 @switch($locale)
                                 @case('en')
-                                <img src="{{asset('images/flag/en.png')}}" width="25px"> English
+                                <img src="{{asset('storage/images/flag/en.png')}}" width="25px" /> English
                                 @break
                                 @case('fr')
-                                <img src="{{asset('images/flag/fr.png')}}" width="25px"> Français
+                                <img src="{{asset('storage/images/flag/fr.png')}}" width="25px" /> Français
                                 @break
                                 @case('es')
-                                <img src="{{asset('images/flag/es.png')}}" width="25px"> Espagnol
+                                <img src="{{asset('storage/images/flag/es.png')}}" width="25px" /> Espagnol
                                 @break
                                 @default
-                                <img src="{{asset('images/flag/en.png')}}" width="25px"> English
+                                <img src="{{asset('storage/images/flag/en.png')}}" width="25px" /> English
                                 @endswitch
                                 <span class="caret"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="lang/en"><img src="{{asset('images/flag/en.png')}}" width="25px"> English</a>
-                                <a class="dropdown-item" href="lang/fr"><img src="{{asset('images/flag/fr.png')}}" width="25px"> Français</a>
-                                <a class="dropdown-item" href="lang/es"><img src="{{asset('images/flag/fes.png')}}" width="25px"> Espagnol</a>
+                                <a class="dropdown-item" href="lang/en"><img src="{{asset('storage/images/flag/en.png')}}" width="25px" /> English</a>
+                                <a class="dropdown-item" href="lang/fr"><img src="{{asset('storage/images/flag/fr.png')}}" width="25px" /> Français</a>
+                                <a class="dropdown-item" href="lang/es"><img src="{{asset('storage/images/flag/es.png')}}" width="25px" /> Espagnol</a>
                             </div>
                         </li>
 

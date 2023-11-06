@@ -31,6 +31,16 @@
     "Photo du véhicule" : "Picture of the vehicle",
     "Enregistrer" : "Save",
 
-    "Plaque immatriculation (format AAA 123)" : "License plate (format AAA 123)"
+    "Plaque immatriculation (format AAA 123)" : "License plate (format AAA 123)",
+
+
+    "Détails pour l'utilisateur" : "Details for user",
+    "Nom complet" : "Complete name",
+    "Adresse" : "Address",
+    "Âge" : "Age",
+    "Numéro de téléphone" : "Phone number",
+    "Courriel" : "Email",
+    "Liste des véhicules" : "Vehicles list"
+
 
 }

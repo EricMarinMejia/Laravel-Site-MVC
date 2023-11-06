@@ -6,7 +6,7 @@
 
         <div class="col-lg-10">
             <h3>Pro-Auto Experts</h3>
-            <h4>Système de gestions des réparations automobiles</h4>
+            <h4>{{ __("Système de gestion des réparations automobiles") }}</h4>
         </div>
 
         <div class="col-lg-2">
@@ -38,7 +38,7 @@
                 </h2>
                 </a>
             <p><strong>{{ $user->email }}</strong></p>
-            <a href="{{ url('user/'. $user->id) }}" class="btn btn-outline-primary">Voir les détails</a>
+            <a href="{{ url('user/'. $user->id) }}" class="btn btn-outline-primary">{{ __("Voir les détails") }}</a>
             </div>
         </div>
         @endforeach

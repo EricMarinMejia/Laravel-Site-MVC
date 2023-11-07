@@ -16,6 +16,7 @@
             </li>
             <li>Migration de la base de données : <code>php artisan migrate</code></li>
             <li>[OPTIONNEL] Générer des données de test dans la base de données : <code>php artisan db:seed</code></li>
+            <li>Copie du dossier images de base dans <samp>storage/</samp> : <code>cp .\images\ .\storage\app\public\ -r</code></li>
             <li>Création du lien symbiotique pour le téléversement d'image dans <samp>storage/public/</samp> : <code>php artisan storage:link</code></li>
             <li>Démarrage sur le navigateur http://127.0.0.1:8000/ : <code>php artisan serve</code></li>
         </ol>

@@ -36,6 +36,8 @@
             </div>
             <br />
 
+
+            <!--
             <div class="buttons">
                 <a href="{{ url('user/'. $user->id .'/edit') }}" class="btn btn-info">{{ __("Modifier") }}</a>
                 <form action="{{ url('user/'. $user->id) }}" method="POST" style="display: inline">
@@ -44,6 +46,7 @@
                     <button type="submit" class="btn btn-danger">{{ __("Supprimer") }}</button>
                 </form>
             </div>
+            -->
         </div>
     </div>
 </div>

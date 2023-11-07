@@ -6,11 +6,11 @@
 
         <div class="col-lg-10">
             <h3>Pro-Auto Experts</h3>
-            <h4>Système de gestion des réparations automobiles</h4>
+            <h4>{{ __("Système de gestion des réparations automobiles") }}</h4>
         </div>
 
         <div class="col-lg-2">
-            <a class="btn btn-success" href="{{ url('repair/create') }}">Ajouter une réparation</a>
+            <a class="btn btn-success" href="{{ url('repair/create') }}">{{ __("Ajouter une réparation") }}</a>
         </div>
 
     </div>
@@ -29,18 +29,17 @@
 <br />
 <div class="container">
     <div class="row">
-        <h1>{{ __('Bonjour') }}</h1>
         @foreach ($repairs as $index => $repair)
         <div class="col-md-4">
             <div class="card card-body">
                 <a href="{{ url('repair/'. $repair->id) }}">
                 <h2>
-                    Réparation #{{ $repair->id }}
+                    {{ __("Réparation") }} #{{ $repair->id }}
                 </h2>
                 </a>
             <p><strong>{{ $repair->description }}</strong></p>
             <p>{{ $repair->date_start }} - {{ $repair->date_end }}</p>
-            <a href="{{ url('repair/'. $repair->id) }}" class="btn btn-outline-primary">Voir les détails</a>
+            <a href="{{ url('repair/'. $repair->id) }}" class="btn btn-outline-primary">{{ __("Voir les détails") }}</a>
             </div>
         </div>
         @endforeach

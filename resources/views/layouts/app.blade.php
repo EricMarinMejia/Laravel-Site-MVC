@@ -36,15 +36,15 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/">Réparations</a>
+                            <a class="nav-link" aria-current="page" href="/">{{ __("Réparations") }}</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/vehicle">Véhicules</a>
+                            <a class="nav-link" aria-current="page" href="/vehicle">{{ __("Véhicules") }}</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/user">Utilisateurs</a>
+                            <a class="nav-link" aria-current="page" href="/user">{{ __("Utilisateurs") }}</a>
                         </li>
                     </ul>
 
@@ -62,7 +62,7 @@
                                 <img src="{{asset('storage/images/flag/fr.png')}}" width="25px" /> Français
                                 @break
                                 @case('es')
-                                <img src="{{asset('storage/images/flag/es.png')}}" width="25px" /> Espagnol
+                                <img src="{{asset('storage/images/flag/es.png')}}" width="25px" /> Español
                                 @break
                                 @default
                                 <img src="{{asset('storage/images/flag/en.png')}}" width="25px" /> English
@@ -72,7 +72,7 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="lang/en"><img src="{{asset('storage/images/flag/en.png')}}" width="25px" /> English</a>
                                 <a class="dropdown-item" href="lang/fr"><img src="{{asset('storage/images/flag/fr.png')}}" width="25px" /> Français</a>
-                                <a class="dropdown-item" href="lang/es"><img src="{{asset('storage/images/flag/es.png')}}" width="25px" /> Espagnol</a>
+                                <a class="dropdown-item" href="lang/es"><img src="{{asset('storage/images/flag/es.png')}}" width="25px" /> Español</a>
                             </div>
                         </li>
 
@@ -98,7 +98,7 @@
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    {{ __('Déconnexion') }}
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

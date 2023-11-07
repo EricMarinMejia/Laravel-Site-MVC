@@ -1,3 +1,98 @@
 {
-    "Bonjour" : "Hola"
+    "Succès" : "Terminado",
+    "Vérification de courriel complétée!" : "¡Verificación por correo electrónico completada!",
+    "Page d'accueil" : "Página principal",
+
+
+    "Détails pour le véhicule" : "Detalles del vehículo",
+    "Propriétaire" : "Dueño",
+    "Marque" : "Marca",
+    "Modèle" : "Modelo",
+    "Plaque d'immatriculation" : "Matrícula",
+    "Kilometrage" : "Kilómetros",
+    "Entrée créer le" : "Fecha de creación de la entrada",
+    "Dernière modification de l'entrée" : "Última modificación de la entrada",
+    "Historique des réparations" : "Historial de reparaciones",
+    "Voir l'utilisateur" : "Ver usuario",
+    "Modifier" : "Modificar",
+    "Supprimer" : "Borrar",
+
+
+    "Système de gestion des réparations automobiles" : "Sistema de Gestión de Reparaciones Automotrices",
+    "Ajouter un véhicule" : "Agregar un vehículo",
+    "Aucune image disponible" : "Imagen no disponible",
+    "Voir les détails" : "Ver detalles",
+
+
+    "Modifier véhicule" : "Modificar vehículo",
+    "ID du propriétaire" : "ID de propietario",
+    "Plaque d'immatriculation (format AAA 123)" : "Matrícula (formato AAA 123)",
+    "Photo du véhicule" : "Foto del vehículo",
+    "Enregistrer" : "Grabar",
+
+
+    "Plaque immatriculation (format AAA 123)" : "Matrícula (formato AAA 123)",
+
+
+    "Détails pour l'utilisateur" : "Detalles del usuario",
+    "Nom complet" : "Nombre completo",
+    "Adresse" : "Dirección",
+    "Âge" : "Edad",
+    "Numéro de téléphone" : "Número de teléfono",
+    "Courriel" : "Correo electrónico",
+    "Liste des véhicules" : "Lista de vehículos",
+
+
+    "Détails pour la réparation" : "Detalles de la reparación",
+    "Véhicule" : "Vehículo",
+    "Date de début" : "Fecha de inicio",
+    "Date de fin" : "Fecha final",
+    "Description" : "Descripción",
+    "Montant payé" : "Monto pagado",
+    "Mécanicien" : "Mecánico",
+    "Voir le véhicule" : "Ver Vehículo",
+    
+
+    "Ajouter une réparation" : "Agregar una reparación",
+    "Réparation" : "Reparación",
+
+
+    "Modifier réparation" : "Editar reparación",
+    "ID du véhicule" : "ID del vehículo",
+
+
+    "Réparations" : "Reparaciones",
+    "Véhicules" : "Vehículos",
+    "Utilisateurs" : "Usuarios",
+    "Connexion" : "Conexión",
+    "S'inscrire" : "Registrarse",
+    "Déconnexion" : "Cerrar sesión",
+
+
+    "Vérification d'adresse courriel" : "Verificación de correo electrónico",
+    "Un nouveau lien à été envoyé à votre adresse courriel." : "Se ha enviado un nuevo enlace a su correo electrónico.",
+    "Avant de continuer, veuillez consulter votre boîte à courriels pour un lien de vérification." : "Antes de continuar, revise sus correos electrónicos para el enlace de verificación.",
+    "Si vous n'avez pas reçu de lien" : "Si no recibido un enlace",
+    "cliquez ici pour renvoyer un autre" : "haga clic aquí para volver a enviar otro",
+
+
+    "Inscription" : "Registro",
+    "Prénom" : "Nombre",
+    "Nom" : "Apellido",
+    "Mot de passe" : "Contraseña",
+    "Confirmer le mot de passe" : "Confirmar contraseña",
+
+
+    "Se souvenir de moi" : "Recuérdame",
+    "Mot de passe oublié?" : "¿Olvidaste tu contraseña?",
+
+
+    "Réinitialisation de mot de passe" : "Restablecimiento de contraseña",
+    "Réinitialisation le mot de passe" : "Restablecir mi contraseña",
+
+
+    "Envoyer un lien de réinitialisation" : "Enviar un enlace de restablecimiento",
+    "Veuillez confirmer votre mot de passe avant de continuer." : "Confirme su contraseña antes de continuar."
+
+    
 }

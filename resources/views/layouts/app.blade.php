@@ -70,9 +70,9 @@
                                 <span class="caret"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="lang/en"><img src="{{asset('storage/images/flag/en.png')}}" width="25px" /> English</a>
-                                <a class="dropdown-item" href="lang/fr"><img src="{{asset('storage/images/flag/fr.png')}}" width="25px" /> Français</a>
-                                <a class="dropdown-item" href="lang/es"><img src="{{asset('storage/images/flag/es.png')}}" width="25px" /> Español</a>
+                                <a class="dropdown-item" href="/lang/en"><img src="{{asset('storage/images/flag/en.png')}}" width="25px" /> English</a>
+                                <a class="dropdown-item" href="/lang/fr"><img src="{{asset('storage/images/flag/fr.png')}}" width="25px" /> Français</a>
+                                <a class="dropdown-item" href="/lang/es"><img src="{{asset('storage/images/flag/es.png')}}" width="25px" /> Español</a>
                             </div>
                         </li>
 

@@ -97,7 +97,7 @@ Auth::routes();
 Route::get('lang/{locale}', [App\Http\Controllers\LocalizationController::class, 'index']);
 
 
-//Retourne à / si la route n'existe pas  
+//Retourne à / si la route n'existe pas
 Route::get('/{any}', function () {
     return redirect('/');
 })->where('any', '.*');

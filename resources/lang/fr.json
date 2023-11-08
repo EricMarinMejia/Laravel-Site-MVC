@@ -1,98 +1,98 @@
 {
-    "Succès" : "Success",
-    "Vérification de courriel complétée!" : "Email verification completed!",
-    "Page d'accueil" : "Home page",
+    "Succès" : "Succès",
+    "Vérification de courriel complétée!" : "Vérification de courriel complétée!",
+    "Page d'accueil" : "Page d'accueil",
 
 
-    "Détails pour le véhicule" : "Details for vehicle",
-    "Propriétaire" : "Owner",
-    "Marque" : "Brand",
-    "Modèle" : "Model",
-    "Plaque d'immatriculation" : "License plate",
-    "Kilometrage" : "Kilometers",
-    "Entrée créer le" : "Entry's creation date",
-    "Dernière modification de l'entrée" : "Entry's last modification date",
-    "Historique des réparations" : "Repair history",
-    "Voir l'utilisateur" : "See owner's profile",
-    "Modifier" : "Modify",
-    "Supprimer" : "Delete",
+    "Détails pour le véhicule" : "Détails pour le véhicule",
+    "Propriétaire" : "Propriétaire",
+    "Marque" : "Marque",
+    "Modèle" : "Modèle",
+    "Plaque d'immatriculation" : "Plaque d'immatriculation",
+    "Kilometrage" : "Kilometrage",
+    "Entrée créer le" : "Entrée créer le",
+    "Dernière modification de l'entrée" : "Dernière modification de l'entrée",
+    "Historique des réparations" : "Historique des réparations",
+    "Voir l'utilisateur" : "Voir l'utilisateur",
+    "Modifier" : "Modifier",
+    "Supprimer" : "Supprimer",
 
 
-    "Système de gestion des réparations automobiles" : "Automotive Repair Management System",
-    "Ajouter un véhicule" : "Add a vehicle",
-    "Aucune image disponible" : "Image not available",
-    "Voir les détails" : "See details",
+    "Système de gestion des réparations automobiles" : "Système de gestion des réparations automobiles",
+    "Ajouter un véhicule" : "Ajouter un véhicule",
+    "Aucune image disponible" : "Aucune image disponible",
+    "Voir les détails" : "Voir les détails",
 
 
-    "Modifier véhicule" : "Modify vehicle",
-    "ID du propriétaire" : "Owner's ID",
-    "Plaque d'immatriculation (format AAA 123)" : "License plate (format AAA 123)",
-    "Photo du véhicule" : "Picture of the vehicle",
-    "Enregistrer" : "Save",
+    "Modifier véhicule" : "Modifier véhicule",
+    "ID du propriétaire" : "ID du propriétaire",
+    "Plaque d'immatriculation (format AAA 123)" : "Plaque d'immatriculation (format AAA 123)",
+    "Photo du véhicule" : "Photo du véhicule",
+    "Enregistrer" : "Enregistrer",
 
 
-    "Plaque immatriculation (format AAA 123)" : "License plate (format AAA 123)",
+    "Plaque immatriculation (format AAA 123)" : "Plaque immatriculation (format AAA 123)",
 
 
-    "Détails pour l'utilisateur" : "Details for user",
-    "Nom complet" : "Complete name",
-    "Adresse" : "Address",
-    "Âge" : "Age",
-    "Numéro de téléphone" : "Phone number",
-    "Courriel" : "Email",
-    "Liste des véhicules" : "Vehicles list",
+    "Détails pour l'utilisateur" : "Détails pour l'utilisateur",
+    "Nom complet" : "Nom complet",
+    "Adresse" : "Adresse",
+    "Âge" : "Âge",
+    "Numéro de téléphone" : "Numéro de téléphone",
+    "Courriel" : "Courriel",
+    "Liste des véhicules" : "Liste des véhicules",
 
 
-    "Détails pour la réparation" : "Details for repair",
-    "Véhicule" : "Vehicle",
-    "Date de début" : "Start date",
-    "Date de fin" : "End date",
+    "Détails pour la réparation" : "Détails pour la réparation",
+    "Véhicule" : "Véhicule",
+    "Date de début" : "Date de début",
+    "Date de fin" : "Date de fin",
     "Description" : "Description",
-    "Montant payé" : "Paid amount",
-    "Mécanicien" : "Mechanic",
-    "Voir le véhicule" : "See vehicle",
+    "Montant payé" : "Montant payé",
+    "Mécanicien" : "Mécanicien",
+    "Voir le véhicule" : "Voir le véhicule",
     
 
-    "Ajouter une réparation" : "Add a repair",
-    "Réparation" : "Repair",
+    "Ajouter une réparation" : "Ajouter une réparation",
+    "Réparation" : "Réparation",
 
 
-    "Modifier réparation" : "Modify repair",
-    "ID du véhicule" : "Vehicle ID",
+    "Modifier réparation" : "Modifier réparation",
+    "ID du véhicule" : "ID du véhicule",
 
 
-    "Réparations" : "Repairs",
-    "Véhicules" : "Vehicles",
-    "Utilisateurs" : "Users",
-    "Connexion" : "Login",
-    "S'inscrire" : "Sign up",
-    "Déconnexion" : "Logout",
+    "Réparations" : "Réparations",
+    "Véhicules" : "Véhicules",
+    "Utilisateurs" : "Utilisateurs",
+    "Connexion" : "Connexion",
+    "S'inscrire" : "S'inscrire",
+    "Déconnexion" : "Déconnexion",
 
 
-    "Vérification d'adresse courriel" : "Email verification",
-    "Un nouveau lien à été envoyé à votre adresse courriel." : "A new verification link has been sent to your email.",
-    "Avant de continuer, veuillez consulter votre boîte à courriels pour un lien de vérification." : "Before continuing, please consult your emails for a verification link.",
-    "Si vous n'avez pas reçu de lien" : "If you did not receive a link",
-    "cliquez ici pour renvoyer un autre" : "click here to send a new one",
+    "Vérification d'adresse courriel" : "Vérification d'adresse courriel",
+    "Un nouveau lien à été envoyé à votre adresse courriel." : "Un nouveau lien à été envoyé à votre adresse courriel.",
+    "Avant de continuer, veuillez consulter votre boîte à courriels pour un lien de vérification." : "Avant de continuer, veuillez consulter votre boîte à courriels pour un lien de vérification.",
+    "Si vous n'avez pas reçu de lien" : "Si vous n'avez pas reçu de lien",
+    "cliquez ici pour renvoyer un autre" : "cliquez ici pour renvoyer un autre",
 
 
-    "Inscription" : "Sign up",
-    "Prénom" : "First name",
-    "Nom" : "Last name",
-    "Mot de passe" : "Password",
-    "Confirmer le mot de passe" : "Confirm password",
+    "Inscription" : "Inscription",
+    "Prénom" : "Prénom",
+    "Nom" : "Nom",
+    "Mot de passe" : "Mot de passe",
+    "Confirmer le mot de passe" : "Confirmer le mot de passe",
 
 
-    "Se souvenir de moi" : "Remember me",
-    "Mot de passe oublié?" : "Forgot your password?",
+    "Se souvenir de moi" : "Se souvenir de moi",
+    "Mot de passe oublié?" : "Mot de passe oublié?",
 
 
-    "Réinitialisation de mot de passe" : "Reset Password",
-    "Réinitialisation le mot de passe" : "Reset my password",
+    "Réinitialisation de mot de passe" : "Réinitialisation de mot de passe",
+    "Réinitialisation le mot de passe" : "Réinitialisation le mot de passe",
 
 
-    "Envoyer un lien de réinitialisation" : "Send Password Reset Link",
-    "Veuillez confirmer votre mot de passe avant de continuer." : "Please confirm your password before continuing."
+    "Envoyer un lien de réinitialisation" : "Envoyer un lien de réinitialisation",
+    "Veuillez confirmer votre mot de passe avant de continuer." : "Veuillez confirmer votre mot de passe avant de continuer."
 
     
 }

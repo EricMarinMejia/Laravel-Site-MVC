@@ -11,7 +11,7 @@
                 <ol>
                     <li>Générer la clée d'application : <code>php artisan key:generate</code></li>
                     <li>Ajouter les détails de votre base de données pour les champs <samp>DB_DATABASE, DB_USERNAME</samp> et <samp>DB_PASSWORD</samp></li>
-                    <li>Ajouter les détails du service de messagerie mail pour les champs <samp>MAIL_HOST, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD, MAIL_ENCRYPTION</samp> et <samp>MAIL_FROM_ADDRESS</samp>. À but de testing, utiliser <a href="https://mailtrap.io/">MailTrap</a></li>
+                    <li>Ajouter les détails du service de messagerie mail pour les champs <samp>MAIL_HOST, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD, MAIL_ENCRYPTION</samp> et <samp>MAIL_FROM_ADDRESS</samp>. À but de testing, utilisez <a href="https://mailtrap.io/">MailTrap</a></li>
                 </ol>
             </li>
             <li>Migration de la base de données : <code>php artisan migrate</code></li>

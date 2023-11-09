@@ -89,6 +89,10 @@ Route::post('/email/verification-notification', function (Request $request) {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware(['auth', 'verified']);
 
 
+//Route pour la vue about
+Route::view("/about", "about");
+
+
 //Routes pour l'authentification
 Auth::routes();
 

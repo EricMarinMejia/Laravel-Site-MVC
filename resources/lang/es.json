@@ -92,7 +92,30 @@
 
 
     "Envoyer un lien de réinitialisation" : "Enviar un enlace de restablecimiento",
-    "Veuillez confirmer votre mot de passe avant de continuer." : "Confirme su contraseña antes de continuar."
+    "Veuillez confirmer votre mot de passe avant de continuer." : "Confirme su contraseña antes de continuar.",
 
-    
+
+    "À propos de ce projet" : "Acerca de este proyecto",
+    "Informations générales" : "Información general",
+    "Site créer par" : "Sitio creado por",
+    "Cours" : "Curso",
+    "Applications Web transactionnelles" : "Aplicaciones Web Transaccionales",
+    "Session" : "Sesión",
+    "Automne" : "Otoño",
+    "Dépôt Github du projet" : "Repositorio de Github del proyecto",
+    "Description du site et des fonctionalitées" : "Descripción del sitio y características",
+    "Traduction" : "Traducción",
+    "Liste" : "Lista",
+    "Réparation spécifique" : "Reparación específica",
+    "Ajout" : "Aggregar",
+    "Modification" : "Modificar",
+    "Supression" : "Borrar",
+    "Cette fonctionalité permet de supprimer une réparation" : "Esta función le permite eliminar una reparación",
+    "Véhicule spécifique" : "Vehículo específico",
+    "Cette fonctionalitée permet de supprimer un véhicule" : "Esta función le permite eliminar un vehículo",
+    "Utilisateur spécifique" : "Usuario específico",
+    "Comment utiliser le site" : "Cómo utilizar el sitio",
+    "Diagramme de la base de données" : "Diagrama de base de datos",
+    "Base de données basée sur modèle" : "Modelo de base para la Base de datos",
+    "Voir le modèle complet" : "Ver el modelo completo"
 }

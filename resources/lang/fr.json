@@ -92,7 +92,32 @@
 
 
     "Envoyer un lien de réinitialisation" : "Envoyer un lien de réinitialisation",
-    "Veuillez confirmer votre mot de passe avant de continuer." : "Veuillez confirmer votre mot de passe avant de continuer."
+    "Veuillez confirmer votre mot de passe avant de continuer." : "Veuillez confirmer votre mot de passe avant de continuer.",
+
+
+    "À propos de ce projet" : "À propos de ce projet",
+    "Informations générales" : "Informations générales",
+    "Site créer par" : "Site créer par",
+    "Cours" : "Cours",
+    "Applications Web transactionnelles" : "Applications Web transactionnelles",
+    "Session" : "Session",
+    "Automne" : "Automne",
+    "Dépôt Github du projet" : "Dépôt Github du projet",
+    "Description du site et des fonctionalitées" : "Description du site et des fonctionalitées",
+    "Traduction" : "Traduction",
+    "Liste" : "Liste",
+    "Réparation spécifique" : "Réparation spécifique",
+    "Ajout" : "Ajout",
+    "Modification" : "Modification",
+    "Supression" : "Supression",
+    "Cette fonctionalité permet de supprimer une réparation" : "Cette fonctionalité permet de supprimer une réparation",
+    "Véhicule spécifique" : "Véhicule spécifique",
+    "Cette fonctionalitée permet de supprimer un véhicule" : "Cette fonctionalitée permet de supprimer un véhicule",
+    "Utilisateur spécifique" : "Utilisateur spécifique",
+    "Comment utiliser le site" : "Comment utiliser le site",
+    "Diagramme de la base de données" : "Diagramme de la base de données",
+    "Base de données basée sur modèle" : "Base de données basée sur modèle",
+    "Voir le modèle complet" : "Voir le modèle complet"
 
     
 }

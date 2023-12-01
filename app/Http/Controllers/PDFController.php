@@ -9,7 +9,7 @@ class PDFController extends Controller
 {
     public function generatePDF() {
         $data = [
-            'title' => 'Bienvenue au site officiel de Pro-Auto Experts',
+            'title' => 'PDF informatif',
             'author' => 'Eric Marin Mejia'
         ];
 

@@ -15,7 +15,7 @@
         <p><strong>{{ __("Cours") }} : </strong>420-5H6 MO {{ __("Applications Web transactionnelles") }}.</p>
         <p><strong>{{ __("Session") }} : </strong>{{ __("Automne") }} 2023, Collège Montmorency.</p>
         <p><strong>{{ __("Dépôt Github du projet") }} : </strong><a href="https://github.com/EricMarinMejia/Laravel-Site-MVC" target="_blank">Laravel-Site-MVC</a></p>
-
+        <p><strong>{{ __("Document PDF contenant plus d'informations") }} : </strong><a href="{{ url('generate-pdf') }}">{{ __("Télécharger") }}</a></p>
         <br />
         <hr />
         <br />

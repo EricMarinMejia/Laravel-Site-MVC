@@ -8,7 +8,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\LocalizationController;
-use App\Http\Controllers\PDFController
+use App\Http\Controllers\PDFController;
 
 /*
 |--------------------------------------------------------------------------

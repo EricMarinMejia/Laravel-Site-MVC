@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Vehicle;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -87,5 +88,26 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function autocomplete(Request $request)
+    {
+        // $data = User::select("last_name as value", "id")
+        //             ->where('last_name', 'LIKE', '%'. $request->get('search'). '%')
+        //             ->get();
+
+        $data = User::select("id", DB::raw("CONCAT(first_name, ' ', last_name) as value"))
+                    ->where('last_name', 'LIKE', '%'. $request->get('search') . '%')
+                    ->orWhere('first_name', 'LIKE', '%'. $request->get('search') . '%')
+                    ->orderBy('first_name')
+                    ->orderBy('last_name')
+                    ->get();
+    
+        return response()->json($data);
     }
 }

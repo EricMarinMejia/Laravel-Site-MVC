@@ -18,8 +18,9 @@
         </p>
         <br />
         <p>
-            <strong>Quelle est la meilleure chose à propos de la Suisse?</strong><br />
-            <p>Je ne sais pas, mais le drapeau est un gros plus.</p>
+            <strong>Un footballeur va chez le coiffeur</strong><br />
+            <p><strong>Coiffeur: </strong>Comment je coupe tes cheuveux aujourd'hui?</p>
+            <p><strong>Footballeur: </strong>En fait j'aimerais la coupe du monde</p>
         </p>
         <br />
         <p>

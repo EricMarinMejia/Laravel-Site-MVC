@@ -11,7 +11,7 @@
 
         <div class="col-lg-2">
             <div class="container">
-                <p>Rechercher un utilisateur</p>   
+                <p>{{ __("Rechercher un utilisateur") }}</p>   
                 <input class="typeahead form-control" id="search" type="text">
             </div>
         </div>

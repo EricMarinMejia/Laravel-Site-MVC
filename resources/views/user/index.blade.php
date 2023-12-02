@@ -10,10 +10,39 @@
         </div>
 
         <div class="col-lg-2">
-            <!-- <a class="btn btn-success" href="{{ url('user/create') }}">Ajouter une réparation</a> -->
+            <div class="container">
+                <p>Rechercher un utilisateur</p>   
+                <input class="typeahead form-control" id="search" type="text">
+            </div>
         </div>
 
     </div>
+
+    <script type="text/javascript">
+        var path = "{{ route('autocomplete') }}";
+    
+        $( "#search" ).autocomplete({
+            source: function( request, response ) {
+            $.ajax({
+                url: path,
+                type: 'GET',
+                dataType: "json",
+                data: {
+                search: request.term
+                },
+                success: function( data ) {
+                response( data );
+                }
+            });
+            },
+            select: function (event, ui) {
+            window.location.href = '/user/' + ui.item.id;
+            // Prevent the default behavior and stop the event propagation
+            event.preventDefault();
+            event.stopPropagation();
+            }
+        });
+    </script>
 
 
 

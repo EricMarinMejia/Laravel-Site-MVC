@@ -62,6 +62,7 @@ Route::controller(UserController::class)->group(function () {
         Route::get('/user/{id}', 'show');
     
         Route::post('/user', 'store');
+        Route::get('autocomplete', 'autocomplete')->name('autocomplete');
         
         //Routes non implémentées - ne fait pas partie du cours
         //Route::get('/user/{id}/edit', 'edit');

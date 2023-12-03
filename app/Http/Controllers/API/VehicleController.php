@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
+use App\Http\Requests\VehicleStoreRequest;
 
 class VehicleController extends Controller
 {
@@ -25,7 +26,7 @@ class VehicleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(VehicleStoreRequest $request)
     {
         $today = now();
 
@@ -95,7 +96,7 @@ class VehicleController extends Controller
      * @param  \App\Models\Vehicle  $vehicle
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Vehicle $vehicle)
+    public function update(VehicleStoreRequest $request, Vehicle $vehicle)
     {
         $today = now();
 

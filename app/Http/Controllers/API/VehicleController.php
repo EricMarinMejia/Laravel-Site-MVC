@@ -17,8 +17,8 @@ class VehicleController extends Controller
      */
     public function index()
     {
-        $vehicles = Vehicle::all();
-        return response()->json($vehicles);
+        $vehicles = Vehicle::paginate(10);
+        return VehicleResource::collection($vehicles);
     }
 
     /**
@@ -31,14 +31,14 @@ class VehicleController extends Controller
     {
         $today = now();
 
-        $request->validate([
-            'user_id' => 'required',
-            'brand' => 'required',
-            'model' => 'required',
-            'license_plate' => 'required',
-            'kilometers' => 'required',
-            'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
-        ]);
+        // $request->validate([
+        //     'user_id' => 'required',
+        //     'brand' => 'required',
+        //     'model' => 'required',
+        //     'license_plate' => 'required',
+        //     'kilometers' => 'required',
+        //     'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
+        // ]);
 
 
         if ($request->file('image') != null) {
@@ -76,7 +76,6 @@ class VehicleController extends Controller
 
             return response()->json($vehicle, 201);
         }
-
     }
 
     /**
@@ -101,14 +100,14 @@ class VehicleController extends Controller
     {
         $today = now();
 
-        $request->validate([
-            'user_id' => 'required',
-            'brand' => 'required',
-            'model' => 'required',
-            'license_plate' => 'required',
-            'kilometers' => 'required',
-            'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
-        ]);
+        // $request->validate([
+        //     'user_id' => 'required',
+        //     'brand' => 'required',
+        //     'model' => 'required',
+        //     'license_plate' => 'required',
+        //     'kilometers' => 'required',
+        //     'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
+        // ]);
 
 
         if ($request->file('image') != null) {

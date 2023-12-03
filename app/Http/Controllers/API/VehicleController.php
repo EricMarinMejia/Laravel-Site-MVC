@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
 use App\Http\Requests\VehicleStoreRequest;
+use App\Http\Resources\VehicleResource;
 
 class VehicleController extends Controller
 {
@@ -86,7 +87,7 @@ class VehicleController extends Controller
      */
     public function show(Vehicle $vehicle)
     {
-        return response()->json($vehicle);
+        return new VehicleResource($vehicle);
     }
 
     /**

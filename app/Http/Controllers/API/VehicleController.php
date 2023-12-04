@@ -27,18 +27,18 @@ class VehicleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(VehicleStoreRequest $request)
+    public function store(Request $request)
     {
         $today = now();
 
-        // $request->validate([
-        //     'user_id' => 'required',
-        //     'brand' => 'required',
-        //     'model' => 'required',
-        //     'license_plate' => 'required',
-        //     'kilometers' => 'required',
-        //     'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
-        // ]);
+        $request->validate([
+            'user_id' => 'required',
+            'brand' => 'required',
+            'model' => 'required',
+            'license_plate' => 'required',
+            'kilometers' => 'required',
+            'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
+        ]);
 
 
         if ($request->file('image') != null) {
@@ -49,7 +49,7 @@ class VehicleController extends Controller
                 $path = $image->storeAs('images/upload', $filename, 'public');
             }
 
-            $vehicle = new vehicle([
+            $vehicle = new Vehicle([
                 'created_at' => $today,
                 'updated_at' => $today,
                 'user_id' => $request->user_id,
@@ -60,10 +60,12 @@ class VehicleController extends Controller
                 'image' => $filename
             ]);
 
+            $vehicle->save();
+
             return response()->json($vehicle, 201);
         } else {
 
-            $vehicle = new vehicle([
+            $vehicle = new Vehicle([
                 'created_at' => $today,
                 'updated_at' => $today,
                 'user_id' => $request->user_id,
@@ -73,6 +75,8 @@ class VehicleController extends Controller
                 'kilometers' => $request->kilometers,
                 'image' => null
             ]);
+
+            $vehicle->save();
 
             return response()->json($vehicle, 201);
         }
@@ -96,18 +100,18 @@ class VehicleController extends Controller
      * @param  \App\Models\Vehicle  $vehicle
      * @return \Illuminate\Http\Response
      */
-    public function update(VehicleStoreRequest $request, Vehicle $vehicle)
+    public function update(Request $request, Vehicle $vehicle)
     {
         $today = now();
 
-        // $request->validate([
-        //     'user_id' => 'required',
-        //     'brand' => 'required',
-        //     'model' => 'required',
-        //     'license_plate' => 'required',
-        //     'kilometers' => 'required',
-        //     'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
-        // ]);
+        $request->validate([
+            'user_id' => 'required',
+            'brand' => 'required',
+            'model' => 'required',
+            'license_plate' => 'required',
+            'kilometers' => 'required',
+            'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
+        ]);
 
 
         if ($request->file('image') != null) {

@@ -104,6 +104,7 @@ class VehicleController extends Controller
     {
         $today = now();
 
+
         $request->validate([
             'user_id' => 'required',
             'brand' => 'required',
@@ -133,7 +134,7 @@ class VehicleController extends Controller
                 'image' => $filename
             ]);
 
-            return response()->json();
+            return response()->json($vehicle, 201);
         } else {
 
             $vehicle->update([
@@ -144,10 +145,9 @@ class VehicleController extends Controller
                 'model' => $request->model,
                 'license_plate' => $request->license_plate,
                 'kilometers' => $request->kilometers,
-                'image' => null
             ]);
 
-            return response()->json();
+            return response()->json($vehicle, 201);
         }
     }
 

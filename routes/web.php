@@ -40,7 +40,7 @@ Route::controller(RepairController::class)->group(function () {
 
 Route::controller(VehicleController::class)->group(function () {
 
-    Route::group(['middleware' => ['auth', 'verified']], function () {
+        Route::get('/vehicle/autocomplete', 'autocomplete')->name('autocomplete');
         Route::get('/vehicle', 'index');
         Route::get('/vehicle/create', 'create');
         Route::get('/vehicle/{id}', 'show');
@@ -49,7 +49,7 @@ Route::controller(VehicleController::class)->group(function () {
         Route::post('/vehicle', 'store');
         Route::patch('/vehicle/{id}', 'update');
         Route::delete('/vehicle/{id}', 'destroy');
-    });
+
 
 });
 
@@ -62,13 +62,13 @@ Route::controller(UserController::class)->group(function () {
         Route::get('/user/{id}', 'show');
     
         Route::post('/user', 'store');
-        Route::get('autocomplete', 'autocomplete')->name('autocomplete');
         
         //Routes non implémentées - ne fait pas partie du cours
         //Route::get('/user/{id}/edit', 'edit');
         //Route::patch('/user/{id}', 'update');
         //Route::delete('/user/{id}', 'destroy'); 
     });
+    //Route::get('autocomplete', 'autocomplete')->name('autocomplete');
 
 });
 

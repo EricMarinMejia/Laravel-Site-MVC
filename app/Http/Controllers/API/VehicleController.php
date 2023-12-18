@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
 use App\Http\Requests\VehicleStoreRequest;
@@ -17,7 +18,7 @@ class VehicleController extends Controller
      */
     public function index()
     {
-        $vehicles = Vehicle::paginate(10);
+        $vehicles = Vehicle::all();
         return VehicleResource::collection($vehicles);
     }
 
@@ -162,5 +163,20 @@ class VehicleController extends Controller
         $vehicle->delete();
 
         return response()->json();
+    }
+
+    public function autocomplete(Request $request)
+    {
+        return response()->json("yo");
+         $data = Vehicle::select("license_plate as value", "id")
+                     ->where('license_plate', 'LIKE', '%'. $request->get('search'). '%')
+                     ->get();
+
+        /*$data = Vehicle::select("id", DB::raw("license_plate as value"))
+                    ->where('license_plate', 'LIKE', '%'. $request->get('search') . '%')
+                    ->orderby('license_plate')
+                    ->get();*/
+    
+        return response()->json($data);
     }
 }

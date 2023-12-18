@@ -170,4 +170,19 @@ class VehicleController extends Controller
         $vehicle->delete();
         return redirect('/vehicle')->with('success', 'véhicule supprimé avec succès');
     }
+
+    public function autocomplete(Request $request)
+    {
+         $data = Vehicle::select("license_plate as value", "id")
+                     ->where('license_plate', 'LIKE', '%'. $request->get('search'). '%')
+                     ->get();
+
+    
+        $response = response()->json($data);
+
+        // Add the Access-Control-Allow-Origin header
+        $response->header('Access-Control-Allow-Origin', '*');
+            
+        return $response;
+    }
 }
